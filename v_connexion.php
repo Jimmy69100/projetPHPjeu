@@ -49,7 +49,7 @@ else
 
 $req->closeCursor();
 
-header ("Refresh: 5;URL=accueil.php"); //redirection vers URL après 5 secondes.
+header ("Refresh: 5;URL=index.php"); //redirection vers URL après 5 secondes.
 ?>
 
 
