@@ -67,13 +67,12 @@ h1{
 	text-align: center;
 	width: 590px;
 	height: 773px;
-	padding-left: 14px;
+	padding-left: 114px;
 
 }
 #classement{
 
 	background-image:url(classement/Classement.png);
-
 	background-repeat: no-repeat;
 	padding-top: 80px;
 	margin-left: 450px;
@@ -99,6 +98,10 @@ h1{
 	color: white;
 	font-size: 30px;
 	padding-left: 14px;
+}
+#regle p{
+	word-wrap: break-word;
+	width: 557px;
 }
 div{
 	text-align: center;
