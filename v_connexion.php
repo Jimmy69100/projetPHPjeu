@@ -1,4 +1,5 @@
 <?php include'head.php'; ?>
+<div id="regle">
 <?php
 //stockage dans des variables des saisis du formulaire
 $pseudo = $_POST['pseudo'];
@@ -37,7 +38,8 @@ if ($resultat == 0)
 {
     echo 'Identifiant incorrect !';
 
-}
+}?>
+<?php
 else
 {
     $_SESSION['id'] = $resultat['id'];
