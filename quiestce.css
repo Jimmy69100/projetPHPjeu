@@ -24,8 +24,6 @@ a{
 }
 p{
 	margin-bottom: 50px;
-	word-wrap: break-word;
-	width: 557px;
 }
 form{
 	width: 310px;
@@ -69,7 +67,7 @@ h1{
 	text-align: center;
 	width: 590px;
 	height: 773px;
-	padding-left: 120px;
+	padding-left: 14px;
 
 }
 #classement{
