@@ -21,7 +21,7 @@ if (!empty($_SESSION['pseudo'])) {
 
 
 <?php
-//test
+/* test
 
 
 
@@ -33,7 +33,7 @@ while ($donne = $affichage_cheveux->fetch() )
 	<img src="Cheveux_femme/<?php echo $donne['image']; ?>" />
 	<?php
 }
-
+*/
 ?>
 
 
