@@ -29,7 +29,8 @@ form{
 	width: 310px;
 	height: 570px;
 	margin-bottom: 0px;
-
+	margin-top: 88px;
+	margin-left: 123px;
 }
 form p{
 	float: right;
@@ -51,23 +52,21 @@ h1{
 }
 #connexion{
 	background-image:url(connexion/connexion.png);
-	padding-left: 130px;
 	background-repeat: no-repeat;
-	padding-top: 280px;
+	padding-top: 80px;
 	margin-left: 450px;
 	text-align: center;
 	width: 590px;
-	height: 773px;
+	height: 674px;
 }
 #inscription{
 	background-image:url(inscription/Inscription.png);
 	background-repeat: no-repeat;
-	padding-top: 150px;
+	padding-top: 80px;
 	margin-left: 450px;
 	text-align: center;
 	width: 590px;
-	height: 773px;
-	padding-left: 114px;
+	height: 674px;
 
 }
 #classement{
@@ -105,8 +104,6 @@ h1{
 }
 div{
 	text-align: center;
-	width: 670px;
-	height: 773px;
 }
 #couleur{
 position: absolute;
@@ -158,4 +155,17 @@ margin-bottom: 0px;
 	padding-left: 110px;
 	text-align: center;
 	width: 906px;
+}
+#home{
+	float: left;
+	margin-top: -70px;
+}
+#connex{
+	margin-top: 205px;
+	margin-left: 139px;
+	height: 450px;
+}
+.from{
+	height: 569px;
+	width: 570px;
 }

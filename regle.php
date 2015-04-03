@@ -1,5 +1,6 @@
 <?php include'head.php'; ?>
 <div id="regle">
+<a href="index.php" id="home"><img src="accueil/home.png"></a>
 <li>
 <p>1. chaque joueur dispose d'une palette de 24 personnages, et d'une carte personnage.</p>
 <p>2. Le but du jeu est de deviner la carte personnage de l'adversaire avant celui-ci</p>

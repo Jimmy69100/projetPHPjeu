@@ -1,5 +1,6 @@
 <?php include'head.php';?>
-<div id='tableau'><?php
+<div id='tableau'>
+<a href="index.php" id="home"><img src="accueil/home.png"></a><?php
 $sexe = array(
 'homme',
 'femme'

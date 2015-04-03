@@ -1,5 +1,6 @@
 <?php include'head.php'; ?>
 <div id="inscription">
+<a href="index.php" id="home"><img src="accueil/home.png"></a>
 <div class="form">
 <form action="v_inscription.php" method="post">
 	<p>Votre pseudo :<input type="text" name="pseudo"/></p>

@@ -12,4 +12,6 @@ session_start();
   	Qui est-ce ?
  	</title>
 	</head>
+	<header>
+	</header>
 <body>
