@@ -13,8 +13,8 @@ if (empty($_SESSION['pseudo'])) {
 
 if (!empty($_SESSION['pseudo'])) {
 ?>
-<li><a href="deconnexion.php"><img src="accueil/Reglesdujeu.png"></a><br></li>
-<li><a href="commencer.php"><img src="accueil/Reglesdujeu.png"></a><br></li>
+<li><a href="commencer.php"><img src="accueil/Commencer.png"></a><br></li>
+<li><a href="deconnexion.php"><img src="accueil/Deconnexion.png"></a><br></li>
 <?php } ?>
 <li><a href="regle.php"><img src="accueil/Reglesdujeu.png"></a><br></li>
 <li><a href="classement.php"><img src="accueil/Classement.png"></a></li>

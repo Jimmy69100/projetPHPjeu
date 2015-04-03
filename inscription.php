@@ -7,7 +7,7 @@
 	<p>Votre prenom :<input type="text" name="prenom"/></p>
 	<p>Votre email :<input type="mail" name="email"/></p>
 	<p>Votre mot de passe :<input type="pass" name="mdp"/></p><br>
-	<input type="submit" value="connexion">
+	<input type="submit" value="Inscription">
 
 </form>
 </div>
