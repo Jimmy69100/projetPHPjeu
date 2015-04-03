@@ -38,8 +38,7 @@ if ($resultat == 0)
 {
     echo 'Identifiant incorrect !';
 
-}?>
-<?php
+}
 else
 {
     $_SESSION['id'] = $resultat['id'];
