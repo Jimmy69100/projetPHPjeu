@@ -6,7 +6,7 @@
 <?php
 if (empty($_SESSION['pseudo'])) {
 	?>
-<li><a href="connexion.php"><img src="accueil/imgconnex.png"></a><br></li>
+<li><a href="connexion.php"><img src="accueil/connexion.png"></a><br></li>
 <li><a href="inscription.php"><img src="accueil/Inscription.png"></a><br></li>
 <?php
 }
