@@ -19,5 +19,28 @@ if (!empty($_SESSION['pseudo'])) {
 <li><a href="regle.php"><img src="accueil/Reglesdujeu.png"></a><br></li>
 <li><a href="classement.php"><img src="accueil/Classement.png"></a></li>
 
+
+<?php
+/* test
+
+
+
+$sql = "SELECT id, image, couleur, genre FROM cheveux ORDER BY RAND() LIMIT 1";
+$affichage_cheveux= $bdd->query($sql);
+while ($donne = $affichage_cheveux->fetch() )
+{
+?>
+	<img src="Cheveux_femme/<?php echo $donne['image']; ?>" />
+	<?php
+}
+*/
+?>
+
+
+
+
+
+
+
 </div>
 <?php include'footer.php'; ?>

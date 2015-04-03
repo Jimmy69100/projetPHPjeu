@@ -39,6 +39,10 @@ if ($resultat == 0)
     echo 'Identifiant incorrect !';
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 else
 {
     $_SESSION['id'] = $resultat['id'];
