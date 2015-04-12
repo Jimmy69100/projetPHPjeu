@@ -3,12 +3,11 @@
 <a href="index.php" id="home"><img src="accueil/home.png"></a>
 <div class="form">
 <form action="v_inscription.php" method="post">
-	<p>Votre pseudo :<input type="text" name="pseudo"/></p>
-	<p>Votre nom :<input type="text" name="nom"/></p><br>
-	<p>Votre prenom :<input type="text" name="prenom"/></p>
-	<p>Votre email :<input type="mail" name="email"/></p>
-	<p>Votre mot de passe :<input type="pass" name="mdp"/></p><br>
-	<input type="submit" value="Inscription">
+	<p>Votre pseudo :<input type="text" name="pseudo" required/></p>
+	<p>Votre nom :<input type="text" name="nom" required/></p><br>
+	<p>Votre prenom :<input type="text" name="prenom" required/></p>
+	<p>Votre email :<input type="email" name="email" required/></p>
+	<p>Votre mot de passe :<input type="password" name="mdp" required/></p><br>
 
 </form>
 </div>
