@@ -14,7 +14,7 @@ $corps = "SELECT * FROM corp ORDER BY RAND() LIMIT 0, 1";
 $corps = $bdd->query($corps);
 while ($donnee = $corps->fetch() ) {
 ?>
-	<img src="Corps/<?php echo $donnee['image']; ?>" /></br>
+	<img id="couleur" src="Corps/<?php echo $donnee['image']; ?>" /></br>
 
 <?php
 $id_corps = $donnee['ID_corp'];
