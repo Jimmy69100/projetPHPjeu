@@ -149,6 +149,7 @@ margin-top: 12px;
 #collier{
 position: absolute;
 z-index: 4;
+max-width: 27px;
 margin-left: 26px;
 margin-top: 52px;
 margin-bottom: 0px;
