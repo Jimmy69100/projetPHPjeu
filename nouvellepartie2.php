@@ -1,4 +1,5 @@
-<?php include'head.php'; 
+<?php include'head.php'; ?>
+<div id="tableau" ><?php
 
 $i = 1;
 
@@ -6,7 +7,7 @@ while ($i <25) {
 
 
 
-
+?><div id="image"><?php
 
 //affichage du corps noir/blanc
 $corps = "SELECT * FROM corp ORDER BY RAND() LIMIT 0, 1";
@@ -29,7 +30,7 @@ $cheveux = "SELECT * FROM cheveux ORDER BY RAND() LIMIT 0, 1";
 $cheveux = $bdd->query($cheveux);
 while ($cheveux2 = $cheveux->fetch() ) {
 ?>
-	<img src="Cheveux/<?php echo $cheveux2['image']; ?>" /></br>
+	<img id="cheveux" src="Cheveux/<?php echo $cheveux2['image']; ?>" /></br>
 	<?php
 $genre = $cheveux2['genre'];
 $couleur = $cheveux2['couleur'];
@@ -49,7 +50,7 @@ $barbe->execute(array(
 
 while ($barbe2= $barbe->fetch() ) {
 ?>
-	<img src="Barbe/<?php echo $barbe2['image']; ?>" /></br>
+	<img id="barbe" src="Barbe/<?php echo $barbe2['image']; ?>" /></br>
 	<?php
 	$id_barbe = $barbe2['ID_barbe'];
 									}
@@ -67,7 +68,7 @@ $collier = $bdd->query($collier);
 
 while ($collier2= $collier->fetch() ) {
 ?>
-	<img src="Collier/<?php echo $collier2['image']; ?>" /></br>
+	<img id="collier" src="Collier/<?php echo $collier2['image']; ?>" /></br>
 	<?php
 	$id_collier = $collier2['ID_collier'];
 									}
@@ -82,7 +83,7 @@ $lunettes = "SELECT * FROM lunettes ORDER BY RAND() LIMIT 0, 1";
 $lunettes = $bdd->query($lunettes);
 while ($lunettes2= $lunettes->fetch() ) {
 ?>
-	<img src="Lunette/<?php echo $lunettes2['image']; ?>" /></br>
+	<img id="lunette" src="Lunette/<?php echo $lunettes2['image']; ?>" /></br>
 	<?php
 	$id_lunette = $lunettes2['ID_lunettes'];
 									}
@@ -91,7 +92,7 @@ $vetement = "SELECT * FROM vetement ORDER BY RAND() LIMIT 0, 1";
 $vetement = $bdd->query($vetement);
 while ($vetement2= $vetement->fetch() ) {
 ?>
-	<img src="vetement/<?php echo $vetement2['image']; ?>" /></br>
+	<img id="cravate" src="vetement/<?php echo $vetement2['image']; ?>" /></br>
 	<?php
 	$id_vetement = $vetement2['ID_vetement'];
 									}
@@ -113,7 +114,7 @@ $nom_update->execute(array(
 	'pris' => 1
 	));
 
-}
+} ?></div> <?php
 
 $insertion = $bdd->prepare('INSERT INTO personnage(ID_corp, ID_cheveux, ID_barbe, ID_collier, ID_lunettes, ID_vetement, ID_nom) VALUES(:corp, :cheveux, :barbe, :collier, :lunette, :vetement, :nom)');
 $insertion->execute(array(
@@ -143,8 +144,7 @@ $nom_update2->execute(array(
 ?>
 
 
-
-
+</div>
 <?php 
 include'footer.php';
  ?>
