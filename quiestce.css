@@ -81,7 +81,7 @@ h1{
 	height: 773px;
 }
 #image{
-	margin-right: 2px;
+	margin-right: 31px;
 	width: 73px;
 	height: 121px;
 	float: left;
@@ -158,9 +158,11 @@ margin-bottom: 0px;
 	background-image:url(Fondquiestce2BLEU.png);
 	background-repeat: no-repeat;
 	padding-top: 77px;
-	padding-left: 110px;
+	padding-left: 237px;
+	padding-right: 221px;
 	text-align: center;
-	width: 906px;
+	width: 640px;
+	height: 752px;
 }
 #home{
 	float: left;
