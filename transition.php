@@ -160,6 +160,38 @@ $insertion->execute(array(
 $i = $i + 1;
 
 }
+$selec_mystere = "SELECT * FROM personnage ORDER BY RAND() LIMIT 0, 1";
+$selec_mystere = $bdd->query($selec_mystere);
+while ($selec_mystere2= $selec_mystere->fetch() ) {
+
+	$mystere_j = $selec_mystere2['id'];
+
+									}
+
+
+
+$update_mystere_j = "UPDATE personnage SET mystere_j = :mystere_j WHERE id = :id AND ID_partie = :partie";
+$update_mystere_j = $bdd->prepare($update_mystere_j);
+$update_mystere_j->execute(array(
+	'id' => $mystere_j,
+	'partie' => $_SESSION['num_partie'],
+	'mystere_j' => 1
+	));
+
+$selec_mystere3 = "SELECT * FROM personnage ORDER BY RAND() LIMIT 0, 1";
+$selec_mystere3 = $bdd->query($selec_mystere3);
+while ($selec_mystere4= $selec_mystere3->fetch() ) {
+
+	$mystere_nj = $selec_mystere4['id'];
+
+									}
+$update_mystere_nj = "UPDATE personnage SET mystere_nj = :mystere_nj WHERE id = :id AND ID_partie = :partie";
+$update_mystere_nj = $bdd->prepare($update_mystere_nj);
+$update_mystere_nj->execute(array(
+	'id' => $mystere_nj,
+	'partie' => $_SESSION['num_partie'],
+	'mystere_nj' => 1
+	));
 
 
 
@@ -178,6 +210,6 @@ echo "Creation de la nouvelle partie en cours, veuillez patienter...";
 
 </div>
 <?php 
-header ("Refresh: 5;URL=nouvellepartie2.php");
+header ("Refresh: 5;URL=mespartieencours.php");
 include'footer.php';
  ?>
