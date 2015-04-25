@@ -211,8 +211,7 @@ $nom_update2->execute(array(
 
 
 
-echo "Creation de la nouvelle partie en cours, veuillez patienter...";
-
+echo "Cr&eacuteation de la nouvelle partie en cours, veuillez patienter...";
 ?>
 
 
