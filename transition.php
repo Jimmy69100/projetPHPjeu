@@ -27,7 +27,7 @@ while ($num_partie2= $num_partie->fetch() ) {
 }
 
 
-while ($i <26) {
+while ($i <25) {
 
 
 
