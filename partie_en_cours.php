@@ -51,7 +51,7 @@ while ($personnage2= $personnage->fetch() ) {
 
 </br></br></br>
 </div>
-<div id="tableaucarte" >
+<div>
 <?php
 
 $personnage_advers = "SELECT * FROM personnage p, corp co, cheveux ch, barbe b, collier col, vetement v, lunettes l  
@@ -138,7 +138,7 @@ while ($personnage_myst_j2= $personnage_myst_j->fetch() ) {
 
 
 
-//selection / affichage perso mystere advers
+//affichage perso mystere advers
 
 
 
@@ -172,7 +172,7 @@ while ($personnage_myst_nj2= $personnage_myst_nj->fetch() ) {
 
 
  $nom_mystere_nj_id = $personnage_myst_nj2['ID_nom'];
- 
+
 }
 }
 ?> </div> <?php
