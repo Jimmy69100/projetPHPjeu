@@ -7,7 +7,6 @@ body{
 	background-image:url(page.png);
 	background-repeat: no-repeat;
 	padding: 80px 18px 0px 15px;
-
 	margin-left: 450px;
 	text-align: center;
 	width: 557px;
@@ -154,7 +153,7 @@ margin-left: 9px;
 }
 #cravate{
 position: absolute;
-z-index: 3;
+z-index: 2;
 max-width: 78px;
 margin-top: 12px;
 }
