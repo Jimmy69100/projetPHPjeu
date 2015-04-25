@@ -25,9 +25,10 @@ $partie->execute(array(
     ));
 
 while ($partie2= $partie->fetch() ) {
+	
+	$_SESSION['num_partie'] = $partie2['ID_partie'];
 	?>
-
-	<a href="partie_en_cours.php?id=<?php echo $partie2['ID_partie']; ?>"><?php echo "partie".$partie2['ID_partie']; ?></a>
+	<a href="partie_en_cours.php?id=<?php echo $_SESSION['num_partie']; ?>"><?php echo "partie".$_SESSION['num_partie']; ?></a>
 	<?php
 }
 

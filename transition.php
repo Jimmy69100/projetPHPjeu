@@ -160,6 +160,10 @@ $insertion->execute(array(
 $i = $i + 1;
 
 }
+
+// Selection des personnages mystères
+
+
 $selec_mystere = "SELECT * FROM personnage ORDER BY RAND() LIMIT 0, 1";
 $selec_mystere = $bdd->query($selec_mystere);
 while ($selec_mystere2= $selec_mystere->fetch() ) {
@@ -193,6 +197,10 @@ $update_mystere_nj->execute(array(
 	'mystere_nj' => 1
 	));
 
+
+
+
+//fin selection mystère
 
 
 $nom_update2 = "UPDATE nom SET pris = :pris";
