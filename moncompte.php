@@ -1,5 +1,5 @@
 <?php include'head.php'; ?>
-
+<div id="head">
 <h1>Bienvenue dans votre interface de gestion d'utilisateur</h1>
  <p>Vous pouvez a partir de cette interface modifier vos information de compte, le nombre de parties
   joué </p></br>
@@ -34,33 +34,5 @@
     <input type="submit" value="enregistrement">
 
 </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php include'footer.php'; ?>

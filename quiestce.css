@@ -6,10 +6,11 @@ body{
 #head{
 	background-image:url(page.png);
 	background-repeat: no-repeat;
-	padding-top: 80px;
+	padding: 80px 18px 0px 15px;
+
 	margin-left: 450px;
 	text-align: center;
-	width: 590px;
+	width: 557px;
 	height: 773px;
 
 }
