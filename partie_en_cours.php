@@ -54,7 +54,41 @@ while ($personnage2= $personnage->fetch() ) {
 <div>
 <?php
 
+$personnage_advers = "SELECT * FROM personnage p, corp co, cheveux ch, barbe b, collier col, vetement v, lunettes l  
+WHERE co.ID_corp = p.ID_corp 
+AND ch.ID_cheveux = p.ID_cheveux 
+AND b.ID_barbe = p.ID_barbe 
+AND col.ID_collier = p.ID_collier 
+AND v.ID_vetement = p.ID_vetement 
+AND l.ID_lunettes = p.ID_lunettes 
+AND ID_partie = :partie 
+ORDER BY id 
+";
+$personnage_advers = $bdd->prepare($personnage_advers);
+$personnage_advers->execute(array(
+	'partie' => $id_partie
+	));
+while ($personnage_advers2= $personnage_advers->fetch() ) {
 
+	 if ($personnage_advers2['est_affiche'] == 1) {
+				
+	?>
+<div id="image">
+
+
+
+
+
+<img src="dos.png" /></br>
+<?php
+	} ?>
+</div> <?php
+} ?>
+
+
+
+
+<?php
 //selection / affichage perso mystere advers
 
 
