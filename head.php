@@ -15,3 +15,4 @@ session_start();
 	<header>
 	</header>
 <body>
+<a href="index.php" id="home"><img src="accueil/home.png"></a>

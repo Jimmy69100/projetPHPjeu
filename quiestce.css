@@ -166,8 +166,9 @@ margin-bottom: 0px;
 	height: 752px;
 }
 #home{
-	float: left;
-	margin-top: -70px;
+	position: absolute;
+	margin-left: 447px;
+	margin-top: 14px;
 }
 #connex{
 	margin-top: 205px;
