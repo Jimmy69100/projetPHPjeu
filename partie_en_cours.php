@@ -73,10 +73,8 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 	 if ($personnage_advers2['est_affiche'] == 1) {
 				
 	?>
-<<<<<<< HEAD
 <div id="image">
 <img src="dos.png" /></br>
-=======
 <div id="carte">
 
 
@@ -84,7 +82,6 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 
 
 <img id="carte" src="dos.png" /></br>
->>>>>>> origin/master
 <?php
 
 	} ?>
