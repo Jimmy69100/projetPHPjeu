@@ -1,7 +1,8 @@
 body{
-	background-image:url(fond.png);
+	background-image:url(fond.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%;
+	width: 100%;
 }
 #head{
 	background-image:url(page.png);
