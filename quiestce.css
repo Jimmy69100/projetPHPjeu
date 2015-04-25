@@ -90,11 +90,19 @@ h1{
 #tableaucarte{
 	float: left;
 	width: 373px;
+	margin: 95px 0px 0px 100px;
+	padding-bottom: 384px;
 }
 #carte{
-	margin-left: 10px;
+	margin:0px 10px 5px 0px;
 	float: left;
 	width: 50px;
+}
+#imagemyster{
+	margin-right: 300px;
+}
+#myster{
+	float: left;
 }
 #regle{
 

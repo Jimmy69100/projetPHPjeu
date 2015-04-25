@@ -78,12 +78,15 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 <?php
 
 	} ?>
-</div> <?php
-} ?>
+</div><?php
+} ?></div>
 
 
 
 
+<div id="myster"> 
+
+<div id="imagemyster">
 <?php
 //perso mystère joueur
 
@@ -132,9 +135,8 @@ while ($personnage_myst_j2= $personnage_myst_j->fetch() ) {
  $nom_mystere_j_id = $personnage_myst_j2['ID_nom'];
 }
 }
+
 ?> </div> <?php
-
-
 
 
 
@@ -175,7 +177,7 @@ while ($personnage_myst_nj2= $personnage_myst_nj->fetch() ) {
 
 }
 }
-?> </div> <?php
+?> </div><?php
 
 
 $nom_perso_mystere = "SELECT * FROM personnage p, nom n WHERE n.ID_nom = p.ID_nom AND p.ID_nom = :id";
@@ -188,7 +190,7 @@ while ($nom_perso_mystere2= $nom_perso_mystere->fetch() ) {
 
 	$mystere_nj = $nom_perso_mystere2['nom'];
 
-									}
+									} ?></div><?php
 
 
 
