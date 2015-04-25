@@ -85,6 +85,59 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 
 
 <?php
+//perso mystère joueur
+
+
+$personnage_myst_j = "SELECT * FROM personnage p, corp co, cheveux ch, barbe b, collier col, vetement v, lunettes l  
+WHERE co.ID_corp = p.ID_corp 
+AND ch.ID_cheveux = p.ID_cheveux 
+AND b.ID_barbe = p.ID_barbe 
+AND col.ID_collier = p.ID_collier 
+AND v.ID_vetement = p.ID_vetement 
+AND l.ID_lunettes = p.ID_lunettes 
+AND ID_partie = :partie 
+AND mystere_j = :myst 
+ORDER BY id 
+";
+$personnage_myst_j = $bdd->prepare($personnage_myst_j);
+$personnage_myst_j->execute(array(
+	'partie' => $id_partie,
+	'myst' => 1
+	));
+
+
+while ($personnage_myst_j2= $personnage_myst_j->fetch() ) {
+	 if ($personnage_myst_j2['est_affiche'] == 1) {
+				
+	?>
+
+ <img id="couleur" src="Corps/<?php echo $personnage_myst_j2['image_corps']; ?>" /></br>
+ <img id="cheveux" src="Cheveux/<?php echo $personnage_myst_j2['image_cheveux']; ?>" /></br>
+ <?php
+ if ($personnage_myst_j2['genre_cheveux'] == "homme") {
+ 	?>
+ 	<img id="barbe" src="Barbe/<?php echo $personnage_myst_2['image_barbe']; ?>" /></br>
+ 	<?php
+ }
+ if ($personnage_myst_j2['genre_cheveux'] == "femme") {
+ 	?>
+ 	 <img id="collier" src="collier/<?php echo $personnage_myst_j2['image_collier']; ?>" /></br>
+ 	 <?php
+ }
+ ?>
+
+ <img id="lunette" src="Lunette/<?php echo $personnage_myst_j2['image_lunettes']; ?>" /></br>
+ <img id="cravate" src="vetement/<?php echo $personnage_myst_j2['image_vetement']; ?>" /></br>
+ <?php
+ $nom_mystere_j_id = $personnage_myst_j2['ID_nom'];
+}
+}
+?> </div> <?php
+
+
+
+
+
 //selection / affichage perso mystere advers
 
 
@@ -111,26 +164,15 @@ while ($personnage_myst_nj2= $personnage_myst_nj->fetch() ) {
 	 if ($personnage_myst_nj2['est_affiche'] == 1) {
 				
 	?>
+<div id="carte">
+<img id="carte" src="dos.png" /></br>
 
- <img id="couleur" src="Corps/<?php echo $personnage_myst_nj2['image_corps']; ?>" /></br>
- <img id="cheveux" src="Cheveux/<?php echo $personnage_myst_nj2['image_cheveux']; ?>" /></br>
  <?php
- if ($personnage_myst_nj2['genre_cheveux'] == "homme") {
- 	?>
- 	<img id="barbe" src="Barbe/<?php echo $personnage_myst_nj2['image_barbe']; ?>" /></br>
- 	<?php
- }
- if ($personnage_myst_nj2['genre_cheveux'] == "femme") {
- 	?>
- 	 <img id="collier" src="collier/<?php echo $personnage_myst_nj2['image_collier']; ?>" /></br>
- 	 <?php
- }
- ?>
 
- <img id="lunette" src="Lunette/<?php echo $personnage_myst_nj2['image_lunettes']; ?>" /></br>
- <img id="cravate" src="vetement/<?php echo $personnage_myst_nj2['image_vetement']; ?>" /></br>
- <?php
+
+
  $nom_mystere_nj_id = $personnage_myst_nj2['ID_nom'];
+ 
 }
 }
 ?> </div> <?php
