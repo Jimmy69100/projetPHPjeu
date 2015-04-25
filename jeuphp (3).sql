@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 24 Avril 2015 à 20:35
+-- Généré le :  Sam 25 Avril 2015 à 18:49
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.5.8
 
@@ -27,18 +27,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `barbe` (
-  `ID_barbe` int(15) NOT NULL,
+  `ID_barbe` int(11) NOT NULL,
   `couleur` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`ID_barbe`)
+  `image_barbe` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`ID_barbe`),
+  KEY `ID_barbe` (`ID_barbe`),
+  KEY `ID_barbe_2` (`ID_barbe`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `barbe`
 --
 
-INSERT INTO `barbe` (`ID_barbe`, `couleur`, `type`, `image`) VALUES
+INSERT INTO `barbe` (`ID_barbe`, `couleur`, `type`, `image_barbe`) VALUES
+(0, 'aucun', 'aucun', 'aucun'),
 (1, 'gris', 'sans-moustache', 'barbe1.png'),
 (2, 'roux', 'sans-moustache', 'barbe2.png'),
 (3, 'blond', 'sans-moustache', 'barbe3.png'),
@@ -63,9 +66,9 @@ INSERT INTO `barbe` (`ID_barbe`, `couleur`, `type`, `image`) VALUES
 
 CREATE TABLE IF NOT EXISTS `cheveux` (
   `ID_cheveux` int(18) NOT NULL AUTO_INCREMENT,
-  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `image_cheveux` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `couleur` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `genre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `genre_cheveux` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID_cheveux`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
@@ -74,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `cheveux` (
 -- Contenu de la table `cheveux`
 --
 
-INSERT INTO `cheveux` (`ID_cheveux`, `image`, `couleur`, `genre`, `type`) VALUES
+INSERT INTO `cheveux` (`ID_cheveux`, `image_cheveux`, `couleur`, `genre_cheveux`, `type`) VALUES
 (1, 'cheveux1.png', 'roux', 'femme', 'court'),
 (2, 'cheveux2.png', 'gris', 'femme', 'court'),
 (3, 'cheveux3.png', 'blond', 'femme', 'court'),
@@ -104,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `collier` (
   `ID_collier` int(8) NOT NULL,
   `couleur` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `image_collier` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID_collier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -112,8 +115,8 @@ CREATE TABLE IF NOT EXISTS `collier` (
 -- Contenu de la table `collier`
 --
 
-INSERT INTO `collier` (`ID_collier`, `couleur`, `type`, `image`) VALUES
-(0, 'aucun', 'aucun', ''),
+INSERT INTO `collier` (`ID_collier`, `couleur`, `type`, `image_collier`) VALUES
+(0, 'aucun', 'aucun', 'aucun'),
 (1, 'bleu', 'long', 'collier1.png'),
 (2, 'jaune', 'long', 'collier2.png'),
 (3, 'rouge', 'long', 'collier3.png'),
@@ -132,7 +135,7 @@ INSERT INTO `collier` (`ID_collier`, `couleur`, `type`, `image`) VALUES
 CREATE TABLE IF NOT EXISTS `corp` (
   `ID_corp` int(2) NOT NULL,
   `couleur` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `image_corps` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID_corp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -140,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `corp` (
 -- Contenu de la table `corp`
 --
 
-INSERT INTO `corp` (`ID_corp`, `couleur`, `image`) VALUES
+INSERT INTO `corp` (`ID_corp`, `couleur`, `image_corps`) VALUES
 (1, 'blanc', 'blanc.png'),
 (2, 'noir', 'noir.png');
 
@@ -153,7 +156,7 @@ INSERT INTO `corp` (`ID_corp`, `couleur`, `image`) VALUES
 CREATE TABLE IF NOT EXISTS `lunettes` (
   `ID_lunettes` int(5) NOT NULL,
   `couleur` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `image_lunettes` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID_lunettes`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -161,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `lunettes` (
 -- Contenu de la table `lunettes`
 --
 
-INSERT INTO `lunettes` (`ID_lunettes`, `couleur`, `image`) VALUES
+INSERT INTO `lunettes` (`ID_lunettes`, `couleur`, `image_lunettes`) VALUES
 (1, 'vert', 'lunette1.png'),
 (2, 'violet', 'lunette2.png'),
 (3, 'bleu', 'lunette3.png'),
@@ -180,8 +183,10 @@ CREATE TABLE IF NOT EXISTS `nom` (
   `genre` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `pris` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID_nom`),
-  KEY `pris` (`pris`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=49 ;
+  KEY `pris` (`pris`),
+  KEY `ID_nom` (`ID_nom`),
+  KEY `nom` (`nom`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=49 ;
 
 --
 -- Contenu de la table `nom`
@@ -240,6 +245,27 @@ INSERT INTO `nom` (`ID_nom`, `nom`, `genre`, `pris`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `partie`
+--
+
+CREATE TABLE IF NOT EXISTS `partie` (
+  `ID_partie` int(11) NOT NULL AUTO_INCREMENT,
+  `id_utilisateur` int(11) NOT NULL,
+  `partie_finis` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`ID_partie`),
+  KEY `ID_partie` (`ID_partie`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=63 ;
+
+--
+-- Contenu de la table `partie`
+--
+
+INSERT INTO `partie` (`ID_partie`, `id_utilisateur`, `partie_finis`) VALUES
+(62, 3, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `personnage`
 --
 
@@ -251,10 +277,52 @@ CREATE TABLE IF NOT EXISTS `personnage` (
   `ID_collier` int(11) DEFAULT NULL,
   `ID_lunettes` int(11) DEFAULT NULL,
   `ID_vetement` int(11) NOT NULL,
-  `Id_nom` int(11) NOT NULL,
+  `ID_nom` int(11) NOT NULL,
+  `ID_partie` int(11) NOT NULL,
+  `mystere_j` tinyint(1) NOT NULL DEFAULT '0',
+  `mystere_nj` tinyint(1) NOT NULL DEFAULT '0',
+  `est_affiche` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
-  KEY `ID_corps` (`ID_corp`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=66 ;
+  KEY `ID_corps` (`ID_corp`),
+  KEY `FK_news_ID_cheveux` (`ID_cheveux`),
+  KEY `FK_news_ID_collier` (`ID_collier`),
+  KEY `FK_news_ID_vetement` (`ID_vetement`),
+  KEY `FK_news_ID_lunettes` (`ID_lunettes`),
+  KEY `ID_barbe` (`ID_barbe`),
+  KEY `ID_partie` (`ID_partie`),
+  KEY `ID_nom` (`ID_nom`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=867 ;
+
+--
+-- Contenu de la table `personnage`
+--
+
+INSERT INTO `personnage` (`id`, `ID_corp`, `ID_cheveux`, `ID_barbe`, `ID_collier`, `ID_lunettes`, `ID_vetement`, `ID_nom`, `ID_partie`, `mystere_j`, `mystere_nj`, `est_affiche`) VALUES
+(842, 2, 3, 0, 4, 4, 6, 45, 62, 0, 0, 1),
+(843, 1, 14, 15, 0, 3, 4, 2, 62, 0, 0, 1),
+(844, 1, 4, 0, 7, 2, 9, 35, 62, 0, 0, 1),
+(845, 2, 3, 0, 3, 3, 7, 37, 62, 0, 0, 1),
+(846, 2, 14, 6, 0, 2, 1, 19, 62, 0, 0, 1),
+(847, 2, 5, 0, 4, 2, 14, 34, 62, 0, 0, 1),
+(848, 1, 1, 0, 5, 3, 8, 26, 62, 0, 0, 1),
+(849, 1, 4, 0, 3, 2, 4, 44, 62, 0, 0, 1),
+(850, 1, 2, 0, 2, 2, 2, 41, 62, 0, 0, 1),
+(851, 1, 5, 0, 3, 3, 8, 30, 62, 0, 0, 1),
+(852, 2, 17, 5, 0, 2, 9, 9, 62, 1, 0, 1),
+(853, 2, 7, 0, 0, 5, 2, 48, 62, 0, 1, 1),
+(854, 2, 9, 0, 4, 5, 13, 27, 62, 0, 0, 1),
+(855, 2, 17, 1, 0, 3, 15, 7, 62, 0, 0, 1),
+(856, 2, 15, 7, 0, 5, 3, 24, 62, 0, 0, 1),
+(857, 1, 7, 0, 6, 4, 5, 28, 62, 0, 0, 1),
+(858, 1, 1, 0, 4, 1, 10, 38, 62, 0, 0, 1),
+(859, 1, 6, 0, 1, 2, 4, 33, 62, 0, 0, 1),
+(860, 1, 5, 0, 6, 3, 14, 36, 62, 0, 0, 1),
+(861, 1, 15, 12, 0, 1, 8, 21, 62, 0, 0, 1),
+(862, 1, 18, 15, 0, 1, 12, 16, 62, 0, 0, 1),
+(863, 1, 10, 0, 3, 5, 7, 42, 62, 0, 0, 1),
+(864, 2, 14, 2, 0, 2, 7, 17, 62, 0, 0, 1),
+(865, 1, 3, 0, 4, 5, 11, 25, 62, 0, 0, 1),
+(866, 1, 7, 0, 8, 1, 9, 31, 62, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -263,22 +331,22 @@ CREATE TABLE IF NOT EXISTS `personnage` (
 --
 
 CREATE TABLE IF NOT EXISTS `utilisateur` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `prenom` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `pseudo` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `mail` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `mdp` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `date_inscription` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id_utilisateur`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `pseudo`, `mail`, `mdp`, `date_inscription`) VALUES
-(3, 'gauthe', 'jimmy', 'admin', 'admin@admin.gmail', '04d98d2819faf945261d3b827ba4c12a65c36405', '1/04/15');
+INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `pseudo`, `mail`, `mdp`, `date_inscription`) VALUES
+(3, 'gauthe', 'jimmy', 'admin', 'admin@admin.fr', 'd033e22ae348aeb5660fc2140aec35850c4da997', '1/04/15');
 
 -- --------------------------------------------------------
 
@@ -290,7 +358,7 @@ CREATE TABLE IF NOT EXISTS `vetement` (
   `ID_vetement` int(1) NOT NULL,
   `couleur` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `image_vetement` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID_vetement`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -298,7 +366,7 @@ CREATE TABLE IF NOT EXISTS `vetement` (
 -- Contenu de la table `vetement`
 --
 
-INSERT INTO `vetement` (`ID_vetement`, `couleur`, `type`, `image`) VALUES
+INSERT INTO `vetement` (`ID_vetement`, `couleur`, `type`, `image_vetement`) VALUES
 (1, 'bleu', 'normal', 'vetement1.png'),
 (2, 'vert', 'normal', 'vetement2.png'),
 (3, 'noir', 'normal', 'vetement3.png'),
@@ -314,6 +382,22 @@ INSERT INTO `vetement` (`ID_vetement`, `couleur`, `type`, `image`) VALUES
 (13, 'violet', 'cravate', 'vetement13.png'),
 (14, 'bleu', 'col-large', 'vetement14.png'),
 (15, 'violet', 'col-large', 'vetement15.png');
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `personnage`
+--
+ALTER TABLE `personnage`
+  ADD CONSTRAINT `FK_news_ID_cheveux` FOREIGN KEY (`ID_cheveux`) REFERENCES `cheveux` (`ID_cheveux`),
+  ADD CONSTRAINT `FK_news_ID_collier` FOREIGN KEY (`ID_collier`) REFERENCES `collier` (`ID_collier`),
+  ADD CONSTRAINT `FK_news_ID_lunettes` FOREIGN KEY (`ID_lunettes`) REFERENCES `lunettes` (`ID_lunettes`),
+  ADD CONSTRAINT `FK_news_ID_vetement` FOREIGN KEY (`ID_vetement`) REFERENCES `vetement` (`ID_vetement`),
+  ADD CONSTRAINT `personnage_ibfk_1` FOREIGN KEY (`ID_corp`) REFERENCES `corp` (`ID_corp`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `personnage_ibfk_2` FOREIGN KEY (`ID_barbe`) REFERENCES `barbe` (`ID_barbe`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `personnage_ibfk_3` FOREIGN KEY (`ID_partie`) REFERENCES `partie` (`ID_partie`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
