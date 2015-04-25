@@ -89,7 +89,8 @@ h1{
 	float: left;
 }
 #tableaucarte{
-	width: 500px;
+	float: left;
+	width: 373px;
 }
 #carte{
 	margin-left: 10px;
@@ -170,7 +171,7 @@ margin-bottom: 0px;
 	background-repeat: no-repeat;
 	padding-top: 77px;
 	padding-left: 237px;
-	padding-right: 221px;
+	padding-right: 138px;
 	text-align: center;
 	width: 640px;
 	height: 752px;
