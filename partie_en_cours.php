@@ -74,13 +74,9 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 				
 	?>
 <div id="image">
-
-
-
-
-
 <img src="dos.png" /></br>
 <?php
+
 	} ?>
 </div> <?php
 } ?>
