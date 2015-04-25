@@ -1,7 +1,6 @@
 <?php include'head.php'; ?>
 <div id="head">
 <div>
-<p>bienvenue sur qui est-ce en ligne.</p>
 
 <?php
 if (empty($_SESSION['pseudo'])) {
