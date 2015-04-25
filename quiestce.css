@@ -109,6 +109,7 @@ div{
 #couleur{
 position: absolute;
 z-index: 1;
+width: 44px;
 margin-top: 27px;
 margin-left: 16px;
 }

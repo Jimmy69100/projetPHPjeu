@@ -1,7 +1,7 @@
 <?php include'head.php'; 
 $id_partie = strip_tags($_GET['id']);
 ?>
-
+<div id='tableau'>
 
 
 <?php
@@ -26,32 +26,32 @@ while ($personnage2= $personnage->fetch() ) {
 	 if ($personnage2['est_affiche'] == 1) {
 				
 	?>
-
- <img src="Corps/<?php echo $personnage2['image_corps']; ?>" /></br>
- <img src="Cheveux/<?php echo $personnage2['image_cheveux']; ?>" /></br>
+<div id="image">
+ <img id="couleur" src="Corps/<?php echo $personnage2['image_corps']; ?>" /></br>
+ <img id="cheveux" src="Cheveux/<?php echo $personnage2['image_cheveux']; ?>" /></br>
  <?php
  if ($personnage2['genre_cheveux'] == "homme") {
  	?>
- 	<img src="Barbe/<?php echo $personnage2['image_barbe']; ?>" /></br>
+ 	<img id="barbe" src="Barbe/<?php echo $personnage2['image_barbe']; ?>" /></br>
  	<?php
  }
  if ($personnage2['genre_cheveux'] == "femme") {
  	?>
- 	 <img src="collier/<?php echo $personnage2['image_collier']; ?>" /></br>
+ 	 <img id="collier" src="collier/<?php echo $personnage2['image_collier']; ?>" /></br>
  	 <?php
  }
  ?>
 
- <img src="Lunette/<?php echo $personnage2['image_lunettes']; ?>" /></br>
- <img src="vetement/<?php echo $personnage2['image_vetement']; ?>" /></br>
+ <img id="lunette" src="Lunette/<?php echo $personnage2['image_lunettes']; ?>" /></br>
+ <img id="cravate" src="vetement/<?php echo $personnage2['image_vetement']; ?>" /></br>
 <?php
-	}
+	} ?>
+</div> <?php
+} ?>
 
-}
-
-?>
 </br></br></br>
-
+</div>
+<div>
 <?php
 
 
@@ -82,28 +82,28 @@ while ($personnage_myst_nj2= $personnage_myst_nj->fetch() ) {
 				
 	?>
 
- <img src="Corps/<?php echo $personnage_myst_nj2['image_corps']; ?>" /></br>
- <img src="Cheveux/<?php echo $personnage_myst_nj2['image_cheveux']; ?>" /></br>
+ <img id="couleur" src="Corps/<?php echo $personnage_myst_nj2['image_corps']; ?>" /></br>
+ <img id="cheveux" src="Cheveux/<?php echo $personnage_myst_nj2['image_cheveux']; ?>" /></br>
  <?php
  if ($personnage_myst_nj2['genre_cheveux'] == "homme") {
  	?>
- 	<img src="Barbe/<?php echo $personnage_myst_nj2['image_barbe']; ?>" /></br>
+ 	<img id="barbe" src="Barbe/<?php echo $personnage_myst_nj2['image_barbe']; ?>" /></br>
  	<?php
  }
  if ($personnage_myst_nj2['genre_cheveux'] == "femme") {
  	?>
- 	 <img src="collier/<?php echo $personnage_myst_nj2['image_collier']; ?>" /></br>
+ 	 <img id="collier" src="collier/<?php echo $personnage_myst_nj2['image_collier']; ?>" /></br>
  	 <?php
  }
  ?>
 
- <img src="Lunette/<?php echo $personnage_myst_nj2['image_lunettes']; ?>" /></br>
- <img src="vetement/<?php echo $personnage_myst_nj2['image_vetement']; ?>" /></br>
+ <img id="lunette" src="Lunette/<?php echo $personnage_myst_nj2['image_lunettes']; ?>" /></br>
+ <img id="cravate" src="vetement/<?php echo $personnage_myst_nj2['image_vetement']; ?>" /></br>
  <?php
  $nom_mystere_nj_id = $personnage_myst_nj2['ID_nom'];
 }
 }
-
+?> </div> <?php
 
 
 $nom_perso_mystere = "SELECT * FROM personnage p, nom n WHERE n.ID_nom = p.ID_nom AND p.ID_nom = :id";
