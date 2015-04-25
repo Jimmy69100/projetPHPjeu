@@ -73,13 +73,13 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 	 if ($personnage_advers2['est_affiche'] == 1) {
 				
 	?>
-<div id="image">
+<div id="carte">
 
 
 
 
 
-<img src="dos.png" /></br>
+<img id="carte" src="dos.png" /></br>
 <?php
 	} ?>
 </div> <?php

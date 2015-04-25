@@ -87,6 +87,10 @@ h1{
 	height: 121px;
 	float: left;
 }
+#carte{
+	float: left;
+	width: 50px;
+}
 #regle{
 
 	background-image:url(regles/regles.png);
