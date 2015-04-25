@@ -21,7 +21,7 @@ $_SESSION['pseudo'] = 0;
 
 
 
-$sql = "SELECT id FROM utilisateur WHERE pseudo = :pseudo AND mdp = :mdp";
+$sql = "SELECT id_utilisateur FROM utilisateur WHERE pseudo = :pseudo AND mdp = :mdp";
 // Vérification des identifiants
 $req = $bdd->prepare($sql);
 $req->execute(array(
