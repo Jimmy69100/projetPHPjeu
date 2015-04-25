@@ -90,9 +90,9 @@ h1{
 }
 #tableaucarte{
 	width: 500px;
-	float: right;
 }
 #carte{
+	margin-left: 10px;
 	float: left;
 	width: 50px;
 }
@@ -174,6 +174,7 @@ margin-bottom: 0px;
 	text-align: center;
 	width: 640px;
 	height: 752px;
+	float: left;
 }
 #home{
 	position: absolute;
