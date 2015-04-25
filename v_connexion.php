@@ -44,7 +44,7 @@ if ($resultat == 0)
 
 else
 {
-    $_SESSION['id'] = $resultat['id'];
+   
     $_SESSION['pseudo'] = $pseudo;
     echo 'Vous etes connecte !';
    
