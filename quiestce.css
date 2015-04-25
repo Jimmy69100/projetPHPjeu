@@ -87,6 +87,10 @@ h1{
 	height: 121px;
 	float: left;
 }
+#tableaucarte{
+	width: 500px;
+	float: right;
+}
 #carte{
 	float: left;
 	width: 50px;
