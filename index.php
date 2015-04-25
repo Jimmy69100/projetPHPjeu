@@ -20,19 +20,7 @@ if (!empty($_SESSION['pseudo'])) {
 
 
 <?php
-/* test
 
-
-
-$sql = "SELECT id, image, couleur, genre FROM cheveux ORDER BY RAND() LIMIT 1";
-$affichage_cheveux= $bdd->query($sql);
-while ($donne = $affichage_cheveux->fetch() )
-{
-?>
-	<img src="Cheveux_femme/<?php echo $donne['image']; ?>" />
-	<?php
-}
-*/
 ?>
 
 
