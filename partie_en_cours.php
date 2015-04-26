@@ -27,23 +27,23 @@ while ($personnage2= $personnage->fetch() ) {
 				
 	?>
 <div id="image">
- <img id="couleur" src="Corps/<?php echo $personnage2['image_corps']; ?>" /></br>
- <img id="cheveux" src="Cheveux/<?php echo $personnage2['image_cheveux']; ?>" /></br>
+ <img id="couleur" src="Corps/<?php echo $personnage2['image_corps']; ?>" />
+ <img id="cheveux" src="Cheveux/<?php echo $personnage2['image_cheveux']; ?>" />
  <?php
  if ($personnage2['genre_cheveux'] == "homme") {
  	?>
- 	<img id="barbe" src="Barbe/<?php echo $personnage2['image_barbe']; ?>" /></br>
+ 	<img id="barbe" src="Barbe/<?php echo $personnage2['image_barbe']; ?>" />
  	<?php
  }
  if ($personnage2['genre_cheveux'] == "femme") {
  	?>
- 	 <img id="collier" src="collier/<?php echo $personnage2['image_collier']; ?>" /></br>
+ 	 <img id="collier" src="collier/<?php echo $personnage2['image_collier']; ?>" />
  	 <?php
  }
  ?>
 
- <img id="lunette" src="Lunette/<?php echo $personnage2['image_lunettes']; ?>" /></br>
- <img id="cravate" src="vetement/<?php echo $personnage2['image_vetement']; ?>" /></br>
+ <img id="lunette" src="Lunette/<?php echo $personnage2['image_lunettes']; ?>" />
+ <img id="cravate" src="vetement/<?php echo $personnage2['image_vetement']; ?>" />
 <?php
 	} ?>
 </div> <?php
@@ -114,23 +114,23 @@ while ($personnage_myst_j2= $personnage_myst_j->fetch() ) {
 				
 	?>
 
- <img id="couleur" src="Corps/<?php echo $personnage_myst_j2['image_corps']; ?>" /></br>
- <img id="cheveux" src="Cheveux/<?php echo $personnage_myst_j2['image_cheveux']; ?>" /></br>
+ <img id="couleur" src="Corps/<?php echo $personnage_myst_j2['image_corps']; ?>" />
+ <img id="cheveux" src="Cheveux/<?php echo $personnage_myst_j2['image_cheveux']; ?>" />
  <?php
  if ($personnage_myst_j2['genre_cheveux'] == "homme") {
  	?>
- 	<img id="barbe" src="Barbe/<?php echo $personnage_myst_2['image_barbe']; ?>" /></br>
+ 	<img id="barbe" src="Barbe/<?php echo $personnage_myst_2['image_barbe']; ?>" />
  	<?php
  }
  if ($personnage_myst_j2['genre_cheveux'] == "femme") {
  	?>
- 	 <img id="collier" src="collier/<?php echo $personnage_myst_j2['image_collier']; ?>" /></br>
+ 	 <img id="collier" src="collier/<?php echo $personnage_myst_j2['image_collier']; ?>" />
  	 <?php
  }
  ?>
 
- <img id="lunette" src="Lunette/<?php echo $personnage_myst_j2['image_lunettes']; ?>" /></br>
- <img id="cravate" src="vetement/<?php echo $personnage_myst_j2['image_vetement']; ?>" /></br>
+ <img id="lunette" src="Lunette/<?php echo $personnage_myst_j2['image_lunettes']; ?>" />
+ <img id="cravate" src="vetement/<?php echo $personnage_myst_j2['image_vetement']; ?>" />
  <?php
  $nom_mystere_j_id = $personnage_myst_j2['ID_nom'];
 }
