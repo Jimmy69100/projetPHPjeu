@@ -1,5 +1,5 @@
 <?php include'head.php'; 
-$id_partie = strip_tags($_GET['id']);
+$_SESSION['id_partie'] = $_GET['id'];
 ?>
 <div id='tableau'>
 
@@ -20,7 +20,7 @@ ORDER BY id
 ";
 $personnage = $bdd->prepare($personnage);
 $personnage->execute(array(
-	'partie' => $id_partie
+	'partie' => $_SESSION['id_partie']
 	));
 while ($personnage2= $personnage->fetch() ) {
 
@@ -68,7 +68,7 @@ ORDER BY id
 ";
 $personnage_advers = $bdd->prepare($personnage_advers);
 $personnage_advers->execute(array(
-	'partie' => $id_partie
+	'partie' => $_SESSION['id_partie']
 	));
 while ($personnage_advers2= $personnage_advers->fetch() ) {
 
@@ -106,7 +106,7 @@ ORDER BY id
 ";
 $personnage_myst_j = $bdd->prepare($personnage_myst_j);
 $personnage_myst_j->execute(array(
-	'partie' => $id_partie,
+	'partie' => $_SESSION['id_partie'],
 	'myst' => 1
 	));
 
@@ -161,7 +161,7 @@ ORDER BY id
 ";
 $personnage_myst_nj = $bdd->prepare($personnage_myst_nj);
 $personnage_myst_nj->execute(array(
-	'partie' => $id_partie,
+	'partie' => $_SESSION['id_partie'],
 	'myst' => 1
 	));
 
@@ -192,7 +192,7 @@ $nom_perso_mystere->execute(array(
 
 while ($nom_perso_mystere2= $nom_perso_mystere->fetch() ) {
 
-	$mystere_nj = $nom_perso_mystere2['nom'];
+	$_SESSION['mystere_nj'] = $nom_perso_mystere2['nom'];
 
 									} ?></div><?php
 
@@ -210,15 +210,30 @@ while ($nom_perso_mystere2= $nom_perso_mystere->fetch() ) {
 
 //Debut question :
 error_reporting(0);
-$reponse_nom = $_POST['nom'];
-if ($reponse_nom == $mystere_nj) {
-	echo "PArtie gagne !";
-}
 
 ?>
 
 
-  <form method="post" action="partie_en_cours.php?id=<?php echo $_SESSION['num_partie']; ?>">
+<p>Question sur les cheveux</p>
+  <form method="post" action="traitement_reponse.php">
+  <p>
+     <select name="couleur_cheveux" id="couleur_cheveux">
+     	 <option value="brun">brun</option>
+           <option value="blond">blond</option>
+           <option value="roux">roux</option>
+           <option value="gris">gris</option>
+         
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+
+</br></br>
+
+
+
+
+  <form method="post" action="partie_gagnee.php?id=<?php echo $_SESSION['id_partie']; ?>">
   <input type="text" name="nom" placeholder="nom" />
 <input type="submit" value="Tentez votre chance !" />
 </form>
