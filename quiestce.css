@@ -185,6 +185,9 @@ margin-bottom: 0px;
 	height: 752px;
 	float: left;
 }
+#tableau #carte{
+	width: 78px;
+}
 #home{
 	position: absolute;
 	margin-left: 447px;

@@ -46,27 +46,21 @@ while ($personnage2= $personnage->fetch() ) {
  <img id="lunette" src="Lunette/<?php echo $personnage2['image_lunettes']; ?>" />
  <img id="cravate" src="vetement/<?php echo $personnage2['image_vetement']; ?>" />
 <?php
-echo $personnage2['nom'];
+echo $personnage2['nom'];?></div><?php
 											} 
 											?>
-</div> 
+
 <?php
 
 
-if ($personnage2['est_affiche'] == 0) {
+if ($personnage2['est_affiche'] == 0) { ?>
  	
- 
-	?>
-<div id="carte">
-<img id="carte" src="dos2.png" /></br>
-	<?php
-										}
+<img id="carte" src="dos2.png" /><?php
+	
 	}
 
 
-
-
-
+	}?></div><?php
 
 
 
@@ -74,11 +68,6 @@ if ($personnage2['est_affiche'] == 0) {
 
 
 ?>
-
-
-
-</br></br></br>
-</div>
 <div id="tableaucarte">
 <?php
 
@@ -102,21 +91,18 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 				
 	?>
 <div id="carte">
-<img id="carte" src="dos.png" /></br>
+<img id="carte" src="dos.png" /></div>
 <?php
 
-	} ?>
-</div>
-
-<?php
+	}
 
 
 if ($personnage_advers2['est_affiche_nj'] == 0) {
  	
  
 	?>
-<div id="carte">
-<img id="carte" src="dos2.png" /></br>
+<div id="carte">	
+<img id="carte" src="dos2.png" /></div>
 	<?php
 	}
 } ?></div>
@@ -217,7 +203,7 @@ while ($personnage_myst_nj2= $personnage_myst_nj->fetch() ) {
 				
 	?>
 <div id="carte">
-<img id="carte" src="dos.png" /></br>
+<img id="carte" src="dos.png" />
 
  <?php
  //caracteristiques du personnage A DEVINER (mystere nj)
