@@ -87,6 +87,10 @@ h1{
 	height: 121px;
 	float: left;
 }
+#image p{
+	text-align: center;
+	margin: 0px;
+}
 #tableaucarte{
 	float: left;
 	width: 373px;
@@ -99,12 +103,24 @@ h1{
 	width: 50px;
 }
 #imagemyster{
-	margin-right: 300px;
+	margin-right: 738px;
 	float: left;
 	width: 73px;
+	height: 73px;
 }
 #myster{
 	float: left;
+	margin-left: 483px;
+}
+#question{
+	float: left;
+}
+#question p{
+	margin: 0px;
+}
+#question form{
+	margin:0px 0px 10px 0px;
+	height: 21px;
 }
 #regle{
 
@@ -177,15 +193,16 @@ margin-bottom: 0px;
 #tableau{
 	background-image:url(Fondquiestce2BLEU.png);
 	background-repeat: no-repeat;
-	padding: 77px 153px 263px 237px;
+	padding: 77px 109px 263px 237px;
 	text-align: center;
-	width: 625px;
+	width: 669px;
 	height: 487px;
 	float: left;
 }
 #tableau #carte{
 	width: 78px;
-	margin-bottom: 0px;
+	margin-left: 26px;
+	margin-bottom: 1px;
 }
 #home{
 	position: absolute;
