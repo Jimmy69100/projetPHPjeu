@@ -283,6 +283,47 @@ error_reporting(0);
 </form>
 </br></br>
 
+<p>Question sur les lunettes</p>
+  <form method="post" action="traitement_reponse_couleur_lunettes.php">
+  <p>
+     <select name="couleur_lunettes" id="couleur_lunettes">
+     	 <option value="bleu">bleu</option>
+           <option value="vert">vert</option>
+           <option value="orange">orange</option>
+           <option value="violet">violet</option>
+           <option value="noir">noir</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+</br></br>
+
+<p>Question sur le corps</p>
+  <form method="post" action="traitement_reponse_couleur_corps.php">
+  <p>
+     <select name="couleur_corps" id="couleur_corps">
+     	 <option value="noir">noir</option>
+           <option value="blanc">blanc</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+</br></br>
+
+<p>Question sur le collier</p>
+  <form method="post" action="traitement_reponse_couleur_collier.php">
+  <p>
+     <select name="couleur_collier" id="couleur_collier">
+     	   <option value="bleu">bleu</option>
+           <option value="jaune">jaune</option>
+           <option value="rouge">rouge</option>
+           <option value="gris">gris</option>
+        
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+</br></br>
 
   <form method="post" action="partie_gagnee.php?id=<?php echo $_SESSION['id_partie']; ?>">
   <input type="text" name="nom" placeholder="nom" />

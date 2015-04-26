@@ -12,7 +12,7 @@ $reponse = $_POST['couleur_vetement'];
 
 
 <?php
-//traitement de la réponse couleur_cheveux
+//traitement de la réponse couleur_vetement
 
 
 
