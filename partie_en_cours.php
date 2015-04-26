@@ -47,9 +47,35 @@ while ($personnage2= $personnage->fetch() ) {
  <img id="cravate" src="vetement/<?php echo $personnage2['image_vetement']; ?>" />
 <?php
 echo $personnage2['nom'];
-	} ?>
-</div> <?php
-} ?>
+											} 
+											?>
+</div> 
+<?php
+
+
+if ($personnage2['est_affiche'] == 0) {
+ 	
+ 
+	?>
+<div id="carte">
+<img id="carte" src="dos2.png" /></br>
+	<?php
+										}
+	}
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
 
 </br></br></br>
 </div>
@@ -72,7 +98,7 @@ $personnage_advers->execute(array(
 	));
 while ($personnage_advers2= $personnage_advers->fetch() ) {
 
-	 if ($personnage_advers2['est_affiche'] == 1) {
+	 if ($personnage_advers2['est_affiche_nj'] == 1) {
 				
 	?>
 <div id="carte">
@@ -112,7 +138,7 @@ $personnage_myst_j->execute(array(
 
 
 while ($personnage_myst_j2= $personnage_myst_j->fetch() ) {
-	 if ($personnage_myst_j2['est_affiche'] == 1) {
+	 if ($personnage_myst_j2['est_affiche_nj'] == 1) {
 				
 	?>
 
@@ -174,6 +200,17 @@ while ($personnage_myst_nj2= $personnage_myst_nj->fetch() ) {
 <img id="carte" src="dos.png" /></br>
 
  <?php
+ //caracteristiques du personnage A DEVINER (mystere nj)
+ $_SESSION['couleur_corp'] = $personnage_myst_nj2['couleur_corp'];
+
+$_SESSION['couleur_cheveux'] = $personnage_myst_nj2['couleur_cheveux'];
+
+$_SESSION['couleur_lunettes'] = $personnage_myst_nj2['couleur_lunettes'];
+$_SESSION['couleur_collier'] = $personnage_myst_nj2['couleur_collier'];
+$_SESSION['couleur_barbe'] = $personnage_myst_nj2['couleur_barbe'];
+$_SESSION['couleur_vetement'] = $personnage_myst_nj2['couleur_vetement'];
+
+
 
 
 
@@ -215,10 +252,10 @@ error_reporting(0);
 
 
 <p>Question sur les cheveux</p>
-  <form method="post" action="traitement_reponse.php">
+  <form method="post" action="traitement_reponse_couleur_cheveux.php">
   <p>
      <select name="couleur_cheveux" id="couleur_cheveux">
-     	 <option value="brun">brun</option>
+     	 <option value="noir">noir</option>
            <option value="blond">blond</option>
            <option value="roux">roux</option>
            <option value="gris">gris</option>
@@ -227,10 +264,24 @@ error_reporting(0);
      <input type="submit" value="Envoyer" />
      </p>
 </form>
-
 </br></br>
 
 
+<p>Question sur les vetements</p>
+  <form method="post" action="traitement_reponse_couleur_vetement.php">
+  <p>
+     <select name="couleur_vetement" id="couleur_vetement">
+     	 <option value="bleu">bleu</option>
+           <option value="vert">vert</option>
+           <option value="rouge">rouge</option>
+           <option value="marron">marron</option>
+           <option value="violet">violet</option>
+           <option value="noir">noir</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+</br></br>
 
 
   <form method="post" action="partie_gagnee.php?id=<?php echo $_SESSION['id_partie']; ?>">

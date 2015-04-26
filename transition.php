@@ -57,7 +57,7 @@ while ($cheveux2 = $cheveux->fetch() ) {
 
 	<?php
 $genre = $cheveux2['genre_cheveux'];
-$couleur = $cheveux2['couleur'];
+$couleur = $cheveux2['couleur_cheveux'];
 $id_cheveux = $cheveux2['ID_cheveux'];
 
 }
@@ -65,7 +65,7 @@ $id_cheveux = $cheveux2['ID_cheveux'];
 //condition, on sait la couleur des poils :D et le genre, donc gogo:
 
 if ($genre == 'homme') {
-$barbe = "SELECT * FROM barbe WHERE couleur = :couleur ORDER BY RAND() LIMIT 0, 1";
+$barbe = "SELECT * FROM barbe WHERE couleur_barbe = :couleur ORDER BY RAND() LIMIT 0, 1";
 $barbe = $bdd->prepare($barbe);
 $barbe->execute(array(
     'couleur' => $couleur
