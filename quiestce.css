@@ -129,9 +129,9 @@ div{
 #couleur{
 position: absolute;
 z-index: 1;
-width: 44px;
-margin-top: 27px;
-margin-left: 16px;
+width: 49px;
+margin-top: 4px;
+margin-left: 5px;
 }
 #moustache{
 position: absolute;
@@ -151,28 +151,27 @@ margin-bottom: 0px;
 position: absolute;
 z-index: 3;
 max-width: 33px;
-margin-top: -4px;
-margin-left: 22px;
+margin-top: 32px;
+margin-left: 13px;
 }
 #cheveux{
 position: absolute;
 z-index: 3;
 max-width: 60px;
-margin-top:0px;
-margin-left: 9px;
 }
 #cravate{
 position: absolute;
 z-index: 2;
 max-width: 78px;
-margin-top: 12px;
+margin-top: 66px;
+margin-left: -10px;
 }
 #collier{
 position: absolute;
 z-index: 4;
 max-width: 27px;
-margin-left: 26px;
-margin-top: 52px;
+margin-left: 16px;
+margin-top: 72px;
 margin-bottom: 0px;
 }
 #tableau{
