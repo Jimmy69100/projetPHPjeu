@@ -106,7 +106,19 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 <?php
 
 	} ?>
-</div><?php
+</div>
+
+<?php
+
+
+if ($personnage2['est_affiche'] == 0) {
+ 	
+ 
+	?>
+<div id="carte">
+<img id="carte" src="dos2.png" /></br>
+	<?php
+	}
 } ?></div>
 
 
@@ -161,6 +173,14 @@ while ($personnage_myst_j2= $personnage_myst_j->fetch() ) {
  <img id="cravate" src="vetement/<?php echo $personnage_myst_j2['image_vetement']; ?>" />
 
  <?php 
+  $_SESSION['couleur_corp_joueur'] = $personnage_myst_j2['couleur_corp'];
+
+$_SESSION['couleur_cheveux_joueur'] = $personnage_myst_j2['couleur_cheveux'];
+
+$_SESSION['couleur_lunettes_joueur'] = $personnage_myst_j2['couleur_lunettes'];
+$_SESSION['couleur_collier_joueur'] = $personnage_myst_j2['couleur_collier'];
+$_SESSION['couleur_barbe_joueur'] = $personnage_myst_j2['couleur_barbe'];
+$_SESSION['couleur_vetement_joueur'] = $personnage_myst_j2['couleur_vetement'];
 
  $nom_mystere_j_id = $personnage_myst_j2['ID_nom'];
 }

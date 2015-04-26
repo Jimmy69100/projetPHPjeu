@@ -69,12 +69,13 @@ $update_couleur_collier2->execute(array(
 }
 
 
+$tour_ia = array('couleur_cheveux_ia.php', 'couleur_vetement_ia.php');
+$choix = $tour_ia[array_rand($tour_ia)];
 
 
 
 
-
-
+include $choix;
 
 
 
@@ -86,6 +87,8 @@ $update_couleur_collier2->execute(array(
 ?>
 
 <?php
+
 header ("Refresh: 5;URL=partie_en_cours.php?id=$id_partie");
+
 include'footer.php';
 ?>
