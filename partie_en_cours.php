@@ -7,13 +7,14 @@ $id_partie = strip_tags($_GET['id']);
 <?php
 //affichage des 24 persos
 
-$personnage = "SELECT * FROM personnage p, corp co, cheveux ch, barbe b, collier col, vetement v, lunettes l  
+$personnage = "SELECT * FROM personnage p, corp co, cheveux ch, barbe b, collier col, vetement v, lunettes l, nom n  
 WHERE co.ID_corp = p.ID_corp 
 AND ch.ID_cheveux = p.ID_cheveux 
 AND b.ID_barbe = p.ID_barbe 
 AND col.ID_collier = p.ID_collier 
 AND v.ID_vetement = p.ID_vetement 
 AND l.ID_lunettes = p.ID_lunettes 
+AND n.ID_nom = p.ID_nom 
 AND ID_partie = :partie 
 ORDER BY id 
 ";
@@ -27,24 +28,25 @@ while ($personnage2= $personnage->fetch() ) {
 				
 	?>
 <div id="image">
- <img id="couleur" src="Corps/<?php echo $personnage2['image_corps']; ?>" />
- <img id="cheveux" src="Cheveux/<?php echo $personnage2['image_cheveux']; ?>" />
+ <img id="couleur" src="Corps/<?php echo $personnage2['image_corps']; ?>" /></br>
+ <img id="cheveux" src="Cheveux/<?php echo $personnage2['image_cheveux']; ?>" /></br>
  <?php
  if ($personnage2['genre_cheveux'] == "homme") {
  	?>
- 	<img id="barbe" src="Barbe/<?php echo $personnage2['image_barbe']; ?>" />
+ 	<img id="barbe" src="Barbe/<?php echo $personnage2['image_barbe']; ?>" /></br>
  	<?php
  }
  if ($personnage2['genre_cheveux'] == "femme") {
  	?>
- 	 <img id="collier" src="collier/<?php echo $personnage2['image_collier']; ?>" />
+ 	 <img id="collier" src="collier/<?php echo $personnage2['image_collier']; ?>" /></br>
  	 <?php
  }
  ?>
 
- <img id="lunette" src="Lunette/<?php echo $personnage2['image_lunettes']; ?>" />
- <img id="cravate" src="vetement/<?php echo $personnage2['image_vetement']; ?>" />
+ <img id="lunette" src="Lunette/<?php echo $personnage2['image_lunettes']; ?>" /></br>
+ <img id="cravate" src="vetement/<?php echo $personnage2['image_vetement']; ?>" /></br>
 <?php
+echo $personnage2['nom'];
 	} ?>
 </div> <?php
 } ?>
@@ -91,7 +93,7 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 //perso mystère joueur
 
 
-$personnage_myst_j = "SELECT * FROM personnage p, corp co, cheveux ch, barbe b, collier col, vetement v, lunettes l  
+$personnage_myst_j = "SELECT * FROM personnage p, corp co, cheveux ch, barbe b, collier col, vetement v, lunettes l
 WHERE co.ID_corp = p.ID_corp 
 AND ch.ID_cheveux = p.ID_cheveux 
 AND b.ID_barbe = p.ID_barbe 
@@ -114,24 +116,26 @@ while ($personnage_myst_j2= $personnage_myst_j->fetch() ) {
 				
 	?>
 
- <img id="couleur" src="Corps/<?php echo $personnage_myst_j2['image_corps']; ?>" />
- <img id="cheveux" src="Cheveux/<?php echo $personnage_myst_j2['image_cheveux']; ?>" />
+ <img id="couleur" src="Corps/<?php echo $personnage_myst_j2['image_corps']; ?>" /></br>
+ <img id="cheveux" src="Cheveux/<?php echo $personnage_myst_j2['image_cheveux']; ?>" /></br>
  <?php
  if ($personnage_myst_j2['genre_cheveux'] == "homme") {
  	?>
- 	<img id="barbe" src="Barbe/<?php echo $personnage_myst_2['image_barbe']; ?>" />
+ 	<img id="barbe" src="Barbe/<?php echo $personnage_myst_2['image_barbe']; ?>" /></br>
  	<?php
  }
  if ($personnage_myst_j2['genre_cheveux'] == "femme") {
  	?>
- 	 <img id="collier" src="collier/<?php echo $personnage_myst_j2['image_collier']; ?>" />
+ 	 <img id="collier" src="collier/<?php echo $personnage_myst_j2['image_collier']; ?>" /></br>
  	 <?php
  }
  ?>
 
- <img id="lunette" src="Lunette/<?php echo $personnage_myst_j2['image_lunettes']; ?>" />
- <img id="cravate" src="vetement/<?php echo $personnage_myst_j2['image_vetement']; ?>" />
- <?php
+ <img id="lunette" src="Lunette/<?php echo $personnage_myst_j2['image_lunettes']; ?>" /></br>
+ <img id="cravate" src="vetement/<?php echo $personnage_myst_j2['image_vetement']; ?>" /></br>
+
+ <?php 
+
  $nom_mystere_j_id = $personnage_myst_j2['ID_nom'];
 }
 }
