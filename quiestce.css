@@ -177,12 +177,10 @@ margin-bottom: 0px;
 #tableau{
 	background-image:url(Fondquiestce2BLEU.png);
 	background-repeat: no-repeat;
-	padding-top: 77px;
-	padding-left: 237px;
-	padding-right: 138px;
+	padding: 77px 153px 263px 237px;
 	text-align: center;
-	width: 640px;
-	height: 752px;
+	width: 625px;
+	height: 487px;
 	float: left;
 }
 #tableau #carte{
