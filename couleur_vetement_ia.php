@@ -20,8 +20,8 @@ $reponse_ia = $tableau[array_rand($tableau)];
 
 
 
-$couleur_personnage = "SELECT * FROM personnage p, cheveux ch
-WHERE ch.ID_cheveux = p.ID_cheveux 
+$couleur_personnage = "SELECT * FROM personnage p, vetement v
+WHERE v.ID_vetement = p.ID_vetement
 AND ID_partie = :partie 
 ORDER BY id 
 ";
@@ -31,15 +31,15 @@ $couleur_personnage->execute(array(
 	));
 while ($couleur_personnage2= $couleur_personnage->fetch() ) {
 
-		if ($_SESSION['couleur_cheveux_joueur'] == $reponse_ia) {
+		if ($_SESSION['couleur_vetement_joueur'] == $reponse_ia) {
 
 
 
-$update_couleur_cheveux = "UPDATE personnage p, cheveux c SET est_affiche_nj = :affiche WHERE c.ID_cheveux = p.ID_cheveux AND couleur_cheveux <> :ID_cheveux AND ID_partie = :partie";
-$update_couleur_cheveux = $bdd->prepare($update_couleur_cheveux);
-$update_couleur_cheveux->execute(array(
+$update_couleur_vetement = "UPDATE personnage p, vetement v SET est_affiche_nj = :affiche WHERE v.ID_vetement = p.ID_vetement AND couleur_vetement <> :ID_vetement AND ID_partie = :partie";
+$update_couleur_vetement = $bdd->prepare($update_couleur_vetement);
+$update_couleur_vetement->execute(array(
 	'affiche' => 0,
-	'ID_cheveux' => $reponse_ia,
+	'ID_vetement' => $reponse_ia,
 	'partie' => $id_partie
 	));
 
@@ -50,11 +50,11 @@ $update_couleur_cheveux->execute(array(
 
 else {
 
-  $update_couleur_cheveux2 = "UPDATE personnage p,cheveux c SET est_affiche_nj = :affiche WHERE c.ID_cheveux = p.ID_cheveux AND couleur_cheveux = :ID_cheveux AND ID_partie = :partie";
-$update_couleur_cheveux2 = $bdd->prepare($update_couleur_cheveux2);
-$update_couleur_cheveux2->execute(array(
+  $update_couleur_vetement2 = "UPDATE personnage p,vetement v SET est_affiche_nj = :affiche WHERE v.ID_vetement = p.ID_vetement AND couleur_vetement = :ID_vetement AND ID_partie = :partie";
+$update_couleur_vetement2 = $bdd->prepare($update_couleur_vetement2);
+$update_couleur_vetement2->execute(array(
 	'affiche' => 0,
-	'ID_cheveux' => $reponse_ia,
+	'ID_vetement' => $reponse_ia,
 	'partie' => $id_partie
 	));
 

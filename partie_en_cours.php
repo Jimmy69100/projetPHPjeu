@@ -111,7 +111,7 @@ while ($personnage_advers2= $personnage_advers->fetch() ) {
 <?php
 
 
-if ($personnage2['est_affiche'] == 0) {
+if ($personnage_advers2['est_affiche_nj'] == 0) {
  	
  
 	?>
