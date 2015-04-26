@@ -325,6 +325,22 @@ error_reporting(0);
 </form>
 </br></br>
 
+<p>Question sur la barbe</p>
+  <form method="post" action="traitement_reponse_couleur_barbe.php">
+  <p>
+     <select name="couleur_barbe" id="couleur_barbe">
+     	   <option value="gris">gris</option>
+           <option value="roux">roux</option>
+           <option value="blond">blond</option>
+           <option value="noir">noir</option>
+        
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+</br></br>
+
+
   <form method="post" action="partie_gagnee.php?id=<?php echo $_SESSION['id_partie']; ?>">
   <input type="text" name="nom" placeholder="nom" />
 <input type="submit" value="Tentez votre chance !" />
