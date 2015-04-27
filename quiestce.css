@@ -110,6 +110,8 @@ h1{
 	background-repeat: no-repeat;
 	float: left;
 	width: 373px;
+	padding-top: 68px;
+	padding-left: 27px;
 	margin: 95px 0px 0px 100px;
 }
 #carte{
@@ -209,7 +211,8 @@ margin-bottom: 0px;
 #tableau{
 	background-image:url(tapartie.png);
 	background-repeat: no-repeat;
-	padding: 94px 112px 55px 214px;
+	padding: 119px 112px 55px 33px;
+	margin-left: 97px;
 	text-align: center;
 	width: 690px;
 	height: 680px;
