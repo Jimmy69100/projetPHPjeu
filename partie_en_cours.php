@@ -105,7 +105,105 @@ if ($personnage_advers2['est_affiche_nj'] == 0) {
 <img id="carte" src="dos2.png" /></div>
 	<?php
 	}
-} ?></div>
+} ?></div> <?php
+
+
+//Debut question :
+error_reporting(0);
+
+?>
+
+<div id="question">
+<p>Question sur les cheveux</p>
+  <form method="post" action="traitement_reponse_couleur_cheveux.php">
+  <p>
+     <select name="couleur_cheveux" id="couleur_cheveux">
+     	 <option value="noir">noir</option>
+           <option value="blond">blond</option>
+           <option value="roux">roux</option>
+           <option value="gris">gris</option>
+         
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+
+
+<p>Question sur les vetements</p>
+  <form method="post" action="traitement_reponse_couleur_vetement.php">
+  <p>
+     <select name="couleur_vetement" id="couleur_vetement">
+     	 <option value="bleu">bleu</option>
+           <option value="vert">vert</option>
+           <option value="rouge">rouge</option>
+           <option value="marron">marron</option>
+           <option value="violet">violet</option>
+           <option value="noir">noir</option>
+           <option value="gris">gris</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+
+<p>Question sur les lunettes</p>
+  <form method="post" action="traitement_reponse_couleur_lunettes.php">
+  <p>
+     <select name="couleur_lunettes" id="couleur_lunettes">
+     	 <option value="bleu">bleu</option>
+           <option value="vert">vert</option>
+           <option value="orange">orange</option>
+           <option value="violet">violet</option>
+           <option value="noir">noir</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+<p>Question sur le corps</p>
+  <form method="post" action="traitement_reponse_couleur_corps.php">
+  <p>
+     <select name="couleur_corp" id="couleur_corps">
+     	 <option value="noir">noir</option>
+           <option value="blanc">blanc</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+
+<p>Question sur le collier</p>
+  <form method="post" action="traitement_reponse_couleur_collier.php">
+  <p>
+     <select name="couleur_collier" id="couleur_collier">
+     	   <option value="bleu">bleu</option>
+           <option value="jaune">jaune</option>
+           <option value="rouge">rouge</option>
+           <option value="gris">gris</option>
+        
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+
+<p>Question sur la barbe</p>
+  <form method="post" action="traitement_reponse_couleur_barbe.php">
+  <p>
+     <select name="couleur_barbe" id="couleur_barbe">
+     	   <option value="gris">gris</option>
+           <option value="roux">roux</option>
+           <option value="blond">blond</option>
+           <option value="noir">noir</option>
+        
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+
+
+  <form method="post" action="partie_gagnee.php?id=<?php echo $_SESSION['id_partie']; ?>">
+  <input type="text" name="nom" placeholder="nom" />
+<input type="submit" value="Tentez votre chance !" />
+</form></div>
+
+
 
 
 
@@ -258,107 +356,7 @@ $nb_restant = $nb_perso_advers->rowCount();
 	}
 
 									
-									?></div><?php
-
-
-
-
-
-
-//Debut question :
-error_reporting(0);
-
-?>
-
-<div id="question">
-<p>Question sur les cheveux</p>
-  <form method="post" action="traitement_reponse_couleur_cheveux.php">
-  <p>
-     <select name="couleur_cheveux" id="couleur_cheveux">
-     	 <option value="noir">noir</option>
-           <option value="blond">blond</option>
-           <option value="roux">roux</option>
-           <option value="gris">gris</option>
-         
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form>
-
-
-<p>Question sur les vetements</p>
-  <form method="post" action="traitement_reponse_couleur_vetement.php">
-  <p>
-     <select name="couleur_vetement" id="couleur_vetement">
-     	 <option value="bleu">bleu</option>
-           <option value="vert">vert</option>
-           <option value="rouge">rouge</option>
-           <option value="marron">marron</option>
-           <option value="violet">violet</option>
-           <option value="noir">noir</option>
-           <option value="gris">gris</option>
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form>
-
-<p>Question sur les lunettes</p>
-  <form method="post" action="traitement_reponse_couleur_lunettes.php">
-  <p>
-     <select name="couleur_lunettes" id="couleur_lunettes">
-     	 <option value="bleu">bleu</option>
-           <option value="vert">vert</option>
-           <option value="orange">orange</option>
-           <option value="violet">violet</option>
-           <option value="noir">noir</option>
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form>
-<p>Question sur le corps</p>
-  <form method="post" action="traitement_reponse_couleur_corps.php">
-  <p>
-     <select name="couleur_corp" id="couleur_corps">
-     	 <option value="noir">noir</option>
-           <option value="blanc">blanc</option>
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form>
-
-<p>Question sur le collier</p>
-  <form method="post" action="traitement_reponse_couleur_collier.php">
-  <p>
-     <select name="couleur_collier" id="couleur_collier">
-     	   <option value="bleu">bleu</option>
-           <option value="jaune">jaune</option>
-           <option value="rouge">rouge</option>
-           <option value="gris">gris</option>
-        
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form>
-
-<p>Question sur la barbe</p>
-  <form method="post" action="traitement_reponse_couleur_barbe.php">
-  <p>
-     <select name="couleur_barbe" id="couleur_barbe">
-     	   <option value="gris">gris</option>
-           <option value="roux">roux</option>
-           <option value="blond">blond</option>
-           <option value="noir">noir</option>
-        
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form>
-
-
-  <form method="post" action="partie_gagnee.php?id=<?php echo $_SESSION['id_partie']; ?>">
-  <input type="text" name="nom" placeholder="nom" />
-<input type="submit" value="Tentez votre chance !" />
-</form></div>
+									?></div>
 
 <?php
 include'footer.php';
