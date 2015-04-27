@@ -31,7 +31,7 @@ while ($i <25) {
 
 
 
-?><div id="image"><?php
+
 
 //affichage du corps noir/blanc
 $corps = "SELECT * FROM corp ORDER BY RAND() LIMIT 0, 1";
@@ -138,7 +138,7 @@ $nom_update->execute(array(
 	'pris' => 1
 	));
 
-} ?></div> <?php
+} 
 
 
 
