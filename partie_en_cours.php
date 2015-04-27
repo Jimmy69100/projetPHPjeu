@@ -243,8 +243,21 @@ while ($nom_perso_mystere2= $nom_perso_mystere->fetch() ) {
 
 
 
+$nb_perso_advers = "SELECT * FROM personnage p WHERE est_affiche_nj = :affiche_nj";
+$nb_perso_advers = $bdd->prepare($nb_perso_advers);
+$nb_perso_advers->execute(array(
+	'affiche_nj' => 1
+	));
 
+$nb_restant = $nb_perso_advers->rowCount();
 
+	if ($nb_restant == 1) {
+		header ("Refresh: 1;URL=victoire_ia?id=$id_partie");
+
+	}
+
+									
+									?></div><?php
 
 
 
