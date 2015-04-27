@@ -98,7 +98,6 @@ h1{
 	float: left;
 	width: 373px;
 	margin: 95px 0px 0px 100px;
-	padding-bottom: 384px;
 }
 #carte{
 	margin:0px 10px 5px 0px;
@@ -117,6 +116,7 @@ h1{
 }
 #question{
 	float: left;
+	padding: 0px 0px 17px 86px;
 }
 #question p{
 	margin: 0px;
