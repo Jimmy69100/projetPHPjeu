@@ -131,6 +131,18 @@ error_reporting(0);
 
 <div id="question">
 <div id='question1'>
+
+<p>Question sur le sexe</p>
+  <form method="post" action="traitement_reponse_sexe.php">
+  <p>
+     <select name="sexe" id="sexe">
+     	 <option value="homme">homme</option>
+           <option value="femme">femme</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p></form>
+
+
 <p>Question sur les cheveux</p>
   <form method="post" action="traitement_reponse_couleur_cheveux.php">
   <p>
@@ -312,6 +324,7 @@ $_SESSION['couleur_barbe_joueur'] = $personnage_myst_j2['couleur_barbe'];
 $_SESSION['couleur_vetement_joueur'] = $personnage_myst_j2['couleur_vetement'];
 $_SESSION['type_cheveux_joueur'] = $personnage_myst_j2['type_cheveux'];
 $_SESSION['type_vetement_joueur'] = $personnage_myst_j2['type_vetement'];
+$_SESSION['sexe_joueur'] = $personnage_myst_j2['genre_cheveux'];
  $nom_mystere_j_id = $personnage_myst_j2['ID_nom'];
 }
 }
@@ -361,7 +374,7 @@ $_SESSION['couleur_barbe'] = $personnage_myst_nj2['couleur_barbe'];
 $_SESSION['couleur_vetement'] = $personnage_myst_nj2['couleur_vetement'];
 $_SESSION['type_cheveux'] = $personnage_myst_nj2['type_cheveux'];
 $_SESSION['type_vetement'] = $personnage_myst_nj2['type_vetement'];
-
+$_SESSION['sexe'] = $personnage_myst_nj2['genre_cheveux'];
 
 
  $nom_mystere_nj_id = $personnage_myst_nj2['ID_nom'];
