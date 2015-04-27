@@ -1,6 +1,6 @@
 <?php include'head.php'; 
 $id_partie = $_SESSION['id_partie'];
-$reponse_nom = $_POST['nom'];
+$reponse_nom = strip_tags($_POST['nom']);
 $nom_a_deviner = $_SESSION['mystere_nj'];
 ?>
 <div id='head'>

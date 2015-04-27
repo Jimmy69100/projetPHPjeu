@@ -21,7 +21,7 @@ $_SESSION['ia_'] = "des vetements";
 
 
 $couleur_personnage = "SELECT * FROM personnage p, vetement v
-WHERE ch.ID_vetement = p.ID_vetement
+WHERE v.ID_vetement = p.ID_vetement
 AND ID_partie = :partie 
 ORDER BY id 
 ";

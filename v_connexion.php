@@ -2,7 +2,7 @@
 <div id="regle">
 <?php
 //stockage dans des variables des saisis du formulaire
-$pseudo = $_POST['pseudo'];
+$pseudo = strip_tags($_POST['pseudo']);
 
 $mdp = sha1($_POST['mdp']);
 $_SESSION['pseudo'] = 0;

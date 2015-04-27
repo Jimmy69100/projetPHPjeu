@@ -1,10 +1,10 @@
 <?php include'head.php'; ?>
 <?php
 //stockage dans des variables des saisis du formulaire
-$pseudo = $_POST['pseudo'];
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-$mail = $_POST['email'];
+$pseudo = strip_tags($_POST['pseudo']);
+$nom = strip_tags($_POST['nom']);
+$prenom = strip_tags($_POST['prenom']);
+$mail = strip_tags($_POST['email']);
 $mdp = sha1($_POST['mdp']);
 $erreur = 0;
 $date = date('j/m/y');
@@ -26,9 +26,10 @@ if ($verification_pseudo > 0)
    	 $erreur++;
    }
 $req->CloseCursor();
+/*
 $mail = $_POST['email'];
 include ("mailto.php");
-
+*/
 
 
 
