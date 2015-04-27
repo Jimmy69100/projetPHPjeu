@@ -12,13 +12,18 @@ $req->execute(array(
 	'pseudo' => $_SESSION['pseudo']
 
 	));
-echo ("Votre adresse mail a bien ete change ! redirection vers l'interface utilisateur d'ici peu.");
+?>
+<div id="message">
+	<?php
+echo ("Votre adresse mail a bien &eacutet&eacute chang&eacutee ! Redirection automatique vers l'interface utilisateur en cours ... ");
+?>
+</div>
 
 
 
+<?php
 
 
-
-header ("Refresh: 5;URL=moncompte.php"); //redirection vers URL après 5 secondes.
+header ("Refresh: 2;URL=moncompte.php"); //redirection vers URL après 2 secondes.
 ?>
 <?php include'footer.php'; ?>

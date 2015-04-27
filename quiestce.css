@@ -14,6 +14,11 @@ body{
 	height: 673px;
 	color: white;
 }
+
+#message{
+	margin-top: 300px;
+	font-size: 25px;
+}
 #head form{
 	height: 61px;
 	margin-top: 0px;
@@ -22,8 +27,8 @@ body{
 	margin-top: 20px;
 }
 li{
-	margin-top: 95px;
-	margin-bottom: 60px;
+	margin-top: 65px;
+	margin-bottom: 50px;
 	list-style: none;
 	width: 570px;
 }

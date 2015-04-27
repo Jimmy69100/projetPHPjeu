@@ -2,7 +2,6 @@
 ?>
 
 <div id="head">
-<div>
 
 
 <?php
@@ -17,13 +16,20 @@ $req->execute(array(
 	'pseudo' => $_SESSION['pseudo']
 
 	));
-echo ("Votre mot de passe a bien été modifié! ");
-
-
-
-
-
-
-header ("Refresh: 5;URL=moncompte.php"); //redirection vers URL après 5 secondes.
 ?>
+<div id="message">
+	<?php
+echo ("Votre mot de passe a bien &eacutet&eacute modifi&eacute ! Redirection automatique vers l'interface utilisateur en cours ... ");
+?>
+</div>
+
+
+
+<?php
+
+header ("Refresh: 2;URL=moncompte.php"); //redirection vers URL après 2 secondes.
+?>
+</div>
+
 <?php include'footer.php'; ?>
+
