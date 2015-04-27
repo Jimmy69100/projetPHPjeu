@@ -1,3 +1,3 @@
 <?php include'head.php'; ?>
-<div id="head">
+<div id="rejoindre">
 <?php include'footer.php'; ?>
