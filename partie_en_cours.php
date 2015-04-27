@@ -282,6 +282,7 @@ error_reporting(0);
            <option value="marron">marron</option>
            <option value="violet">violet</option>
            <option value="noir">noir</option>
+           <option value="gris">gris</option>
      </select>
      <input type="submit" value="Envoyer" />
      </p>
