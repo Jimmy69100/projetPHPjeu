@@ -5,7 +5,7 @@ include("head.php");
 <p id="connect">
 <?php
   
-   	echo "Vous avez &eacutet&eacute deconnecte ! ";
+   	echo "Vous avez &eacutet&eacute d&eacuteconnect&eacute ! ";
     $_SESSION['pseudo'] = 0;
     $_SESSION['id'] = 0;
 ?>   
