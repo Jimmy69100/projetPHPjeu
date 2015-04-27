@@ -30,7 +30,7 @@
 
 <p>changer votre mot de passe : </p>
 <form method="post" action="nouveau-pass.php">
-   <input type="pass" name="pass" placeholder="entrez votre nouveau mot de passe" size="35"></br></br>
+   <input type="password" name="pass" placeholder="entrez votre nouveau mot de passe" size="35"></br></br>
     <input type="submit" value="enregistrement">
 
 </form></div>
