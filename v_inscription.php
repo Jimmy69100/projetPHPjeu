@@ -24,7 +24,11 @@ $verification_pseudo = $req->rowCount();
 
 if ($verification_pseudo > 0)
    {
-   	 echo "votre pseudo est deja utilise, veuillez en choisir un autre";
+
+?>
+<div id="message">
+  <?php
+   	 echo "Ce pseudo est d&eacutej&agrave utilis&eacute !";
    	 $erreur++;
    }
 $req->CloseCursor();
@@ -53,7 +57,7 @@ $req2->execute(array(
 ?>
 <div id="message">
   <?php
-echo "Felicitation ! Vous &ecirctes a pr&eacutesent inscrit sur notre site !";
+echo "F&eacutelicitation ! vous &ecirctes &agrave pr&eacutesent inscrit sur notre site !";
 
 
 }
