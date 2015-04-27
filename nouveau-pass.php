@@ -1,5 +1,11 @@
 <?php include'head.php'; 
+?>
 
+<div id="head">
+<div>
+
+
+<?php
 $mdp = sha1($_POST['pass']);
 
 

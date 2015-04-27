@@ -1,9 +1,10 @@
-<?php include'head.php'; 
+<?php include'head.php';  ?>
+
+<div id="head">
+<div>
 
 
-
-
-
+<?php
 
 $req = $bdd->prepare('UPDATE utilisateur SET mail = :mail WHERE pseudo = :pseudo');
 $req->execute(array(
