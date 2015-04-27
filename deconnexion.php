@@ -1,10 +1,7 @@
 <?php
 include("head.php");
-
-
 ?>
-
-
+<div id="regle">
 <p id="connect">
 <?php
   
@@ -16,7 +13,7 @@ include("head.php");
     
  
 
-
+</div>
 <?php
 header ("Refresh: 2;URL=index.php");
 include("footer.php");
