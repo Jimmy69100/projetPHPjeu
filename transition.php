@@ -1,7 +1,7 @@
 
 
 <?php include'head.php'; ?>
-<div id="tableau" ><?php
+<div id="chargement" ><?php
 
 $i = 1;
 

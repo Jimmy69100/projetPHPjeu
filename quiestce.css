@@ -228,7 +228,7 @@ margin-bottom: 0px;
 
 #commencerpartie{
 	margin-top: 150px;
-	width: 70%;
+	width: 40%;
 }
 #gagner{
 	font-size: 26px;
@@ -281,6 +281,21 @@ margin-bottom: 0px;
 	width: 590px;
 	height: 773px;
 }
+<<<<<<< HEAD
 #connect{
 	margin-top: 297px;
+=======
+
+
+#chargement{
+
+	background-image:url(chargement.png);
+	background-repeat: no-repeat;
+	padding-top: 80px;
+	margin-left: 650px;
+	margin-top: 65px;	
+	text-align: center;
+	width: 590px;
+	height: 773px;
+>>>>>>> d1d78f879453472db6773efe58d3676c418a9db6
 }
