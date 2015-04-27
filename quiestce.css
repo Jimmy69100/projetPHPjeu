@@ -242,7 +242,7 @@ margin-bottom: 0px;
 	margin-top: 14px;
 }
 #connex{
-	margin-top: 205px;
+	margin-top: 125px;
 	margin-left: 139px;
 	height: 450px;
 }
@@ -271,6 +271,8 @@ margin-bottom: 0px;
 #liste{
 	font-size: 35px;
 	color: white;
+	margin-top: 125px;
+	font-family: helvetica;
 }
 #encours{
 
@@ -278,7 +280,7 @@ margin-bottom: 0px;
 	background-repeat: no-repeat;
 	padding-top: 80px;
 	margin-left: 488px;
-	margin-top: 32px;	
+	margin-top: 72px;	
 	text-align: center;
 	width: 590px;
 	height: 773px;
@@ -313,6 +315,13 @@ margin-bottom: 0px;
 	margin-top: 297px;
 	color: white;
 	font-size: 26px;
+}
+#connect2{
+	color: white;
+	font-size: 30px;
+	width: 300px;
+	font-family: helvetica;
+	margin-top: 15px;
 }
 
 
