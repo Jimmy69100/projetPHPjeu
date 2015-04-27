@@ -164,8 +164,12 @@ $i = $i + 1;
 // Selection des personnages mystères
 
 
-$selec_mystere = "SELECT * FROM personnage ORDER BY RAND() LIMIT 0, 1";
-$selec_mystere = $bdd->query($selec_mystere);
+$selec_mystere = "SELECT * FROM personnage WHERE id_partie = :id ORDER BY RAND() LIMIT 0, 1";
+$selec_mystere = $bdd->prepare($selec_mystere);
+$selec_mystere->execute(array(
+	'id' => $_SESSION['num_partie']
+	));
+
 while ($selec_mystere2= $selec_mystere->fetch() ) {
 
 	$mystere_j = $selec_mystere2['id'];
@@ -182,8 +186,11 @@ $update_mystere_j->execute(array(
 	'mystere_j' => 1
 	));
 
-$selec_mystere3 = "SELECT * FROM personnage ORDER BY RAND() LIMIT 0, 1";
-$selec_mystere3 = $bdd->query($selec_mystere3);
+$selec_mystere3 = "SELECT * FROM personnage WHERE id_partie = :id ORDER BY RAND() LIMIT 0, 1";
+$selec_mystere3 = $bdd->prepare($selec_mystere3);
+$selec_mystere3->execute(array(
+	'id' => $_SESSION['num_partie']
+	));
 while ($selec_mystere4= $selec_mystere3->fetch() ) {
 
 	$mystere_nj = $selec_mystere4['id'];
@@ -217,6 +224,8 @@ echo "Cr&eacuteation de la nouvelle partie en cours, veuillez patienter...";
 
 </div>
 <?php 
+
 header ("Refresh: 5;URL=mespartieencours.php");
+
 include'footer.php';
  ?>
