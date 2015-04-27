@@ -149,7 +149,7 @@ error_reporting(0);
      	 <option value="court">court</option>
            <option value="mi-long">mi_long</option>
            <option value="long">long</option>
-           <option value="cour">cour</option>
+           
          	 <option value="calvitie">calvitie</option>
      </select>
      <input type="submit" value="Envoyer" />

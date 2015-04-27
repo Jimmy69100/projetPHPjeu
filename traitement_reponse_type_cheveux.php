@@ -47,7 +47,7 @@ $update_couleur_cheveux->execute(array(
 
 else {
 
-  $update_couleur_cheveux2 = "UPDATE personnage p,cheveux c SET est_affiche = :affiche WHERE c.ID_cheveux = p.ID_cheveux AND couleur_type = :ID_cheveux AND ID_partie = :partie";
+  $update_couleur_cheveux2 = "UPDATE personnage p,cheveux c SET est_affiche = :affiche WHERE c.ID_cheveux = p.ID_cheveux AND type_cheveux = :ID_cheveux AND ID_partie = :partie";
 $update_couleur_cheveux2 = $bdd->prepare($update_couleur_cheveux2);
 $update_couleur_cheveux2->execute(array(
 	'affiche' => 0,
@@ -82,7 +82,7 @@ include $choix;
 
 echo "Votre question : le personnage mystere a t-il des cheveux ".$reponse." ?", "</br>" ;
 
-if ($_SESSION['couleur_cheveux'] == $reponse) {
+if ($_SESSION['type_cheveux'] = $reponse) {
 
 echo "reponse a votre question : Oui", "</br>";
 
