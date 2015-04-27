@@ -39,7 +39,6 @@ $nb_partie_perdu = "UPDATE utilisateur SET nb_partie_perdu = :nb_partis";
 $nb_partie_perdu->execute(array(
 	'nb_partis' => $_SESSION['nb_partie_perdu']
 	));
-}
 
 
 
@@ -49,6 +48,7 @@ $nb_partie_perdu->execute(array(
 
 
 
+?>
 <?php
 include'footer.php';
 ?>

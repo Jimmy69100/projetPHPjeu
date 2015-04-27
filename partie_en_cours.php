@@ -240,7 +240,7 @@ while ($nom_perso_mystere2= $nom_perso_mystere->fetch() ) {
 									} ?></div><?php
 
 
-
+$id_partie = $_SESSION['id_partie'];
 
 
 $nb_perso_advers = "SELECT * FROM personnage p WHERE est_affiche_nj = :affiche_nj";
@@ -252,7 +252,8 @@ $nb_perso_advers->execute(array(
 $nb_restant = $nb_perso_advers->rowCount();
 
 	if ($nb_restant == 1) {
-		header ("Refresh: 1;URL=victoire_ia?id=$id_partie");
+		
+		header ("Refresh: 1;URL=victoire_ia.php?id=$id_partie");
 
 	}
 
