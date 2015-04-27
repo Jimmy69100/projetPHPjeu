@@ -34,7 +34,7 @@ $_SESSION['nb_partie_gagnee'] = $_SESSION['nb_partie_gagnee'] + 1;
 $nb_partie_gagnee = "UPDATE utilisateur SET nb_partie_gagnee = :nb_partis";
  $nb_partie_gagnee = $bdd->prepare($nb_partie_gagnee);
 $nb_partie_gagnee->execute(array(
-	'partie' => $_SESSION['nb_partie_gagnee']
+	'nb_partis' => $_SESSION['nb_partie_gagnee']
 	));
 }
 
@@ -43,7 +43,9 @@ $nb_partie_gagnee->execute(array(
 else {
 	echo "Vous avez tent&é le nom : ".$reponse_nom;
 	echo "Désolé, ce n'est pas la bonne réponse ! retentez votre chance.";
+	/*
 	header ("Refresh: 5;URL=partie_en_cours.php?id=$id_partie");
+	*/
 }
 ?>
 
