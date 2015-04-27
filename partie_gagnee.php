@@ -3,7 +3,7 @@ $id_partie = $_SESSION['id_partie'];
 $reponse_nom = $_POST['nom'];
 $nom_a_deviner = $_SESSION['mystere_nj'];
 ?>
-<div id='tableau'>
+<div id='head'>
 
 
 <?php
