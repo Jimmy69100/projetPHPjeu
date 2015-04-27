@@ -12,7 +12,14 @@ body{
 	text-align: center;
 	width: 557px;
 	height: 673px;
-
+	color: white;
+}
+#head form{
+	height: 61px;
+	margin-top: 0px;
+}#head p{
+	margin-bottom: 10px;
+	margin-top: 20px;
 }
 li{
 	margin-top: 55px;

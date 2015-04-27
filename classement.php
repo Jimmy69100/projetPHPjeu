@@ -13,30 +13,7 @@ $partie_total = $user2['nb_partie_gagnee'] + $user2['nb_partie_perdu'];
 echo $user2['pseudo'], " a gagn&eacute ".$user2['nb_partie_gagnee']. " parties et a perdu ".$user2['nb_partie_perdu']. " parties, pour un total de ".$partie_total. " parties jou&eacute.";
 
 	
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

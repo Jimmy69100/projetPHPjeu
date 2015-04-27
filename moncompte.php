@@ -33,6 +33,6 @@
    <input type="pass" name="pass" placeholder="entrez votre nouveau mot de passe" size="35"></br></br>
     <input type="submit" value="enregistrement">
 
-</form>
+</form></div>
 
 <?php include'footer.php'; ?>
