@@ -69,7 +69,7 @@ $update_couleur_collier2->execute(array(
 }
 
 
-$tour_ia = array('type_vetement_ia.php', 'type_cheveux_ia.php', 'type_vetement_ia.php', 'couleur_cheveux_ia.php', 'couleur_vetement_ia.php', 'couleur_corps_ia.php', 'couleur_lunettes_ia.php', 'couleur_barbe_ia.php', 'couleur_collier_ia.php');
+$tour_ia = array('sexe_ia.php', 'type_vetement_ia.php', 'type_cheveux_ia.php', 'type_vetement_ia.php', 'couleur_cheveux_ia.php', 'couleur_vetement_ia.php', 'couleur_corps_ia.php', 'couleur_lunettes_ia.php', 'couleur_barbe_ia.php', 'couleur_collier_ia.php');
 $choix = $tour_ia[array_rand($tour_ia)];
 
 
@@ -94,7 +94,7 @@ echo "reponse a votre question : Non", "</br>";
 
 
 echo "L'adversaire a posé sa question : 
-Votre personnage a t-il ".$_SESSION['ia_']." ".$reponse_ia, "</br>";
+Votre personnage a t-il ".$_SESSION['ia_']." ".$reponse_ia, "?", "</br>";
 
 
 

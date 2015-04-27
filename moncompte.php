@@ -24,14 +24,14 @@
 <h3>Modification des informations</h3>
 <p>Changer votre adresse mail : </p>
 <form method="post" action="nouveau_mail.php">
-   <input type="email" name="mail" placeholder="entrez votre nouveau mail" size="35"></br></br>
+   <input type="email" name="mail" placeholder="entrez votre nouveau mail" size="30" required></br></br>
     <input type="submit" value="Valider !">
 
 </form>
 
 <p>Changer votre mot de passe : </p>
 <form method="post" action="nouveau-pass.php">
-   <input type="password" name="pass" placeholder="entrez votre nouveau mot de passe" size="35"></br></br>
+   <input type="password" name="pass" placeholder="entrez votre nouveau mot de passe" size="30" required></br></br>
     <input type="submit" value="Valider !">
 
 </form></div>
