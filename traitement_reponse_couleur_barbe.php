@@ -98,7 +98,7 @@ echo "reponse a votre question : Non", "</br>";
 }
 
 echo "L'adversaire a posé sa question : 
-Votre personnage a t-il ".$_SESSION['ia_']." de couleur ".$reponse_ia, "</br>";
+Votre personnage a t-il ".$_SESSION['ia_']." ".$reponse_ia, "</br>";
 
 if ($r = 1) {
 echo "reponse a la question de votre adversaire : Oui", "</br>";

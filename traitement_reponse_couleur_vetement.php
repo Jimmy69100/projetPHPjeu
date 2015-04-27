@@ -84,7 +84,7 @@ include $choix;
 
 echo "Votre question : le personnage mystere a t-il des vetements ".$reponse." ?", "</br>" ;
 
-if ($_SESSION['couleur_vetements'] == $reponse) {
+if ($_SESSION['couleur_vetement'] == $reponse) {
 
 echo "reponse a votre question : Oui", "</br>";
 
@@ -96,7 +96,7 @@ echo "reponse a votre question : Non", "</br>";
 }
 
 echo "L'adversaire a posé sa question : 
-Votre personnage a t-il ".$_SESSION['ia_']." de couleur ".$reponse_ia, "</br>";
+Votre personnage a t-il ".$_SESSION['ia_']." ".$reponse_ia, "</br>";
 
 
 
