@@ -30,7 +30,7 @@ $resultat = $req->rowCount();
 if ($resultat == 0)
 {
     echo 'Identifiant incorrect !';
-header ("Refresh: 2;URL=connexion.php")
+header ("Refresh: 2;URL=connexion.php");
 }
 
 
