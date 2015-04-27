@@ -225,7 +225,7 @@ echo "Cr&eacuteation de la nouvelle partie en cours, veuillez patienter...";
 </div>
 <?php 
 
-header ("Refresh: 5;URL=mespartieencours.php");
+header ("Refresh: 2;URL=mespartieencours.php");
 
 include'footer.php';
  ?>

@@ -30,7 +30,7 @@ $resultat = $req->rowCount();
 if ($resultat == 0)
 {
     echo 'Identifiant incorrect !';
-header ("Refresh: 3;URL=connexion.php")
+header ("Refresh: 2;URL=connexion.php")
 }
 
 
@@ -46,7 +46,7 @@ else
 
 $req->closeCursor();
 
-header ("Refresh: 5;URL=index.php"); //redirection vers URL après 5 secondes.
+header ("Refresh: 2;URL=index.php"); //redirection vers URL après 5 secondes.
 ?>
 
 
