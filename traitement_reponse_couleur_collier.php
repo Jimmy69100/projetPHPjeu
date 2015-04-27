@@ -69,7 +69,7 @@ $update_couleur_collier2->execute(array(
 }
 
 
-$tour_ia = array('couleur_cheveux_ia.php', 'couleur_vetement_ia.php', 'couleur_corps_ia.php');
+$tour_ia = array('couleur_cheveux_ia.php', 'couleur_vetement_ia.php', 'couleur_corps_ia.php', 'couleur_lunettes_ia.php', 'couleur_barbe_ia.php', 'couleur_collier_ia.php');
 $choix = $tour_ia[array_rand($tour_ia)];
 
 
@@ -78,17 +78,35 @@ $choix = $tour_ia[array_rand($tour_ia)];
 include $choix;
 
 
+echo "Votre question : le personnage mystere a t-il un collier ".$reponse." ?", "</br>" ;
+
+if ($_SESSION['couleur_collier'] == $reponse) {
+
+echo "reponse a votre question : Oui", "</br>";
+
+}
+
+else {
+
+echo "reponse a votre question : Non", "</br>";
+}
 
 
 
+echo "L'adversaire a posé sa question : 
+Votre personnage a t-il ".$_SESSION['ia_']." de couleur ".$reponse_ia, "</br>";
 
+if ($r = 1) {
+echo "reponse a la question de votre adversaire : Oui", "</br>";
+}
 
+if ($r = 0) {
+	echo "reponse a la question de votre adversaire : Non", "</br>";
+}
 
 ?>
 
 <?php
-
 header ("Refresh: 5;URL=partie_en_cours.php?id=$id_partie");
-
 include'footer.php';
 ?>

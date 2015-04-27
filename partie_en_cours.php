@@ -1,9 +1,25 @@
 <?php include'head.php'; 
 $_SESSION['id_partie'] = $_GET['id'];
+$id_partie = $_SESSION['id_partie'];
 ?>
 <div id='tableau'>
+<?php
+$nb_perso_advers = "SELECT * FROM personnage WHERE est_affiche_nj = :affiche_nj AND ID_partie = :partie";
+$nb_perso_advers = $bdd->prepare($nb_perso_advers);
+$nb_perso_advers->execute(array(
+	'affiche_nj' => 1,
+	'partie' => $_SESSION['id_partie']
+	));
 
+$nb_perso_r = $nb_perso_advers->rowCount();
 
+	if ($nb_perso_r == 1)
+	 {
+		
+		header ("Refresh: 2;URL=victoire_ia.php?id=$id_partie");
+
+	}
+	?>
 <?php
 //affichage des 24 persos
 
@@ -341,21 +357,7 @@ while ($nom_perso_mystere2= $nom_perso_mystere->fetch() ) {
 $id_partie = $_SESSION['id_partie'];
 
 
-$nb_perso_advers = "SELECT * FROM personnage p WHERE est_affiche_nj = :affiche_nj";
-$nb_perso_advers = $bdd->prepare($nb_perso_advers);
-$nb_perso_advers->execute(array(
-	'affiche_nj' => 1
-	));
 
-$nb_restant = $nb_perso_advers->rowCount();
-
-	if ($nb_restant == 1) {
-		
-		header ("Refresh: 1;URL=victoire_ia.php?id=$id_partie");
-
-	}
-
-									
 									?></div>
 
 <?php

@@ -4,7 +4,7 @@ $id_partie = $_SESSION['id_partie'];
 
 $tableau = array ('noir', 'gris', 'roux', 'blond');
 $reponse_ia = $tableau[array_rand($tableau)];
-
+$_SESSION['ia_'] = "des cheveux";
 
 
 
@@ -42,7 +42,7 @@ $update_couleur_cheveux->execute(array(
 	'ID_cheveux' => $reponse_ia,
 	'partie' => $id_partie
 	));
-
+$r = 1;
 
 }
 
@@ -59,7 +59,7 @@ $update_couleur_cheveux2->execute(array(
 	));
 
 
-
+$r = 0;
 
 	}
 

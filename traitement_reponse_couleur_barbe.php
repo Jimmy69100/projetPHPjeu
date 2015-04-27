@@ -84,11 +84,29 @@ $choix = $tour_ia[array_rand($tour_ia)];
 
 include $choix;
 
+echo "Votre question : le personnage mystere a t-il une barbe ".$reponse." ?", "</br>" ;
 
+if ($_SESSION['couleur_barbe'] == $reponse) {
 
+echo "reponse a votre question : Oui", "</br>";
 
+}
 
+else {
 
+echo "reponse a votre question : Non", "</br>";
+}
+
+echo "L'adversaire a posé sa question : 
+Votre personnage a t-il ".$_SESSION['ia_']." de couleur ".$reponse_ia, "</br>";
+
+if ($r = 1) {
+echo "reponse a la question de votre adversaire : Oui", "</br>";
+}
+
+else {
+	echo "reponse a la question de votre adversaire : Non", "</br>";
+}
 
 ?>
 
@@ -96,3 +114,4 @@ include $choix;
 header ("Refresh: 5;URL=partie_en_cours.php?id=$id_partie");
 include'footer.php';
 ?>
+

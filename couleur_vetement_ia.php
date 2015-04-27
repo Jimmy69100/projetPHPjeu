@@ -4,7 +4,7 @@ $id_partie = $_SESSION['id_partie'];
 
 $tableau = array ('bleu', 'vert', 'noir', 'rouge', 'marron', 'gris');
 $reponse_ia = $tableau[array_rand($tableau)];
-
+$_SESSION['ia_'] = "des vetements";
 
 
 
@@ -33,7 +33,7 @@ while ($couleur_personnage2= $couleur_personnage->fetch() ) {
 
 		if ($_SESSION['couleur_vetement_joueur'] == $reponse_ia) {
 
-
+$r = 0;
 
 $update_couleur_vetement = "UPDATE personnage p, vetement v SET est_affiche_nj = :affiche WHERE v.ID_vetement = p.ID_vetement AND couleur_vetement <> :ID_vetement AND ID_partie = :partie";
 $update_couleur_vetement = $bdd->prepare($update_couleur_vetement);
@@ -59,7 +59,7 @@ $update_couleur_vetement2->execute(array(
 	));
 
 
-
+$r = 0;
 
 	}
 

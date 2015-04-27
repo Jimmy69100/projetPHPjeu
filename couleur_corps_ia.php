@@ -4,7 +4,7 @@ $id_partie = $_SESSION['id_partie'];
 
 $tableau = array ('noir', 'blanc');
 $reponse_ia = $tableau[array_rand($tableau)];
-
+$_SESSION['ia_'] = "un corps";
 
 
 
@@ -42,7 +42,7 @@ $update_couleur_corp->execute(array(
 	'ID_corp' => $reponse_ia,
 	'partie' => $id_partie
 	));
-
+$r = 1;
 
 }
 
@@ -59,7 +59,7 @@ $update_couleur_corp2->execute(array(
 	));
 
 
-
+$r = 0;
 
 	}
 
