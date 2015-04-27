@@ -145,7 +145,7 @@ while ($personnage_myst_j2= $personnage_myst_j->fetch() ) {
  <?php
  if ($personnage_myst_j2['genre_cheveux'] == "homme") {
  	?>
- 	<img id="barbe" src="Barbe/<?php echo $personnage_myst_2['image_barbe']; ?>" />
+ 	<img id="barbe" src="Barbe/<?php echo $personnage_myst_j2['image_barbe']; ?>" />
  	<?php
  }
  if ($personnage_myst_j2['genre_cheveux'] == "femme") {
