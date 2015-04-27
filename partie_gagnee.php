@@ -44,9 +44,9 @@ $nb_partie_gagnee->execute(array(
 else {
 	echo "Vous avez tent&é le nom : ".$reponse_nom;
 	echo "Désolé, ce n'est pas la bonne réponse ! retentez votre chance.";
-	/*
+	
 	header ("Refresh: 5;URL=partie_en_cours.php?id=$id_partie");
-	*/
+	
 }
 ?>
 
