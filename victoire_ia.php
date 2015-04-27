@@ -6,13 +6,9 @@ $_SESSION['id_partie'] = $_GET['id'];
 
 
 
-<?php
-echo "L'ordinateur a gagn&é la partie !";
-
-
-
-
-
+<p id="gagner"><?php
+echo "L'ordinateur a gagn&é la partie !";?></p>
+<a href="nouvellepartie.php"><img src="accueil/Nouvellepartie.png"></a>
 
 
 

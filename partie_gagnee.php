@@ -9,7 +9,7 @@ $nom_a_deviner = $_SESSION['mystere_nj'];
 <p id="gagner"><?php
 if ($reponse_nom == $nom_a_deviner) {
 	echo "Vous avez trouve le nom du personnage mystere adversaire : ".$reponse_nom; ?><br></p><p id="gagner2"><?php
-	echo "Felicitation, partie gagne !";?></p><?php
+	echo "Felicitation, partie gagne !";?></p><a href="nouvellepartie.php"><img src="accueil/Nouvellepartie.png"></a><?php
 
 //update de la table partie pour ne plus avoir l'affichage sur la page ds parties en cours
 
