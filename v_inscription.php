@@ -26,7 +26,8 @@ if ($verification_pseudo > 0)
    	 $erreur++;
    }
 $req->CloseCursor();
-
+$mail = $_POST['email'];
+include ("mailto.php");
 
 
 

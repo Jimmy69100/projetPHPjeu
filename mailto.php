@@ -32,7 +32,7 @@ $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$bo
 ?>
 
 <?php
-$message = $passage_ligne."--".$boundary.$passage_ligne
+$message = $passage_ligne."--".$boundary.$passage_ligne;
 
 $message .= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
 $message .= "Content-Transfer-Encoding: 8bit".$passage_ligne;
