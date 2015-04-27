@@ -18,7 +18,7 @@ $reponse = $_POST['couleur_corp'];
 
 
 $couleur_personnage = "SELECT * FROM personnage p, corp c
-WHERE l.ID_lunettes = p.ID_lunettes 
+WHERE c.ID_corp = p.ID_corp 
 AND ID_partie = :partie 
 ORDER BY id 
 ";

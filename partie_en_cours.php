@@ -303,7 +303,7 @@ error_reporting(0);
 <p>Question sur le corps</p>
   <form method="post" action="traitement_reponse_couleur_corps.php">
   <p>
-     <select name="couleur_corps" id="couleur_corps">
+     <select name="couleur_corp" id="couleur_corps">
      	 <option value="noir">noir</option>
            <option value="blanc">blanc</option>
      </select>
