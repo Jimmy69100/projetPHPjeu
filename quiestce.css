@@ -281,10 +281,11 @@ margin-bottom: 0px;
 	width: 590px;
 	height: 773px;
 }
-<<<<<<< HEAD
 #connect{
 	margin-top: 297px;
-=======
+	color: white;
+	font-size: 26px;
+}
 
 
 #chargement{
@@ -297,5 +298,4 @@ margin-bottom: 0px;
 	text-align: center;
 	width: 590px;
 	height: 773px;
->>>>>>> d1d78f879453472db6773efe58d3676c418a9db6
 }
