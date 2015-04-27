@@ -109,7 +109,8 @@ h1{
 	background-image:url(adversaire.png);
 	background-repeat: no-repeat;
 	float: left;
-	width: 373px;
+	height: 354px;
+	width: 374px;
 	padding-top: 68px;
 	padding-left: 27px;
 	margin: 95px 0px 0px 100px;
@@ -120,14 +121,14 @@ h1{
 	width: 50px;
 }
 #imagemyster{
-	margin-right: 738px;
+	margin-right: 535px;
 	float: left;
 	width: 73px;
 	height: 73px;
 }
 #myster{
 	float: left;
-	margin-left: 483px;
+	margin-left: 126px;
 }
 #question{
 	float: left;
@@ -211,11 +212,11 @@ margin-bottom: 0px;
 #tableau{
 	background-image:url(tapartie.png);
 	background-repeat: no-repeat;
-	padding: 119px 37px 55px 33px;
+	padding: 119px 37px 22px 33px;
 	margin-left: 97px;
 	text-align: center;
 	width: 690px;
-	height: 680px;
+	height: 542px;
 	float: left;
 }
 #tableau #carte{
