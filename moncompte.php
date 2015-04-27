@@ -7,7 +7,7 @@
 
     <h3>Vos informations : </h3>
     <?php
-     $sql = "SELECT pseudo, mail FROM utilisateur WHERE pseudo = :pseudo";
+     $sql = "SELECT * FROM utilisateur WHERE pseudo = :pseudo";
   $req = $bdd->prepare($sql);
   $req->execute(array(
     'pseudo' => $_SESSION['pseudo']
@@ -15,7 +15,8 @@
   while ($donne = $req->fetch() ) {
     echo "Votre pseudo : ", $donne['pseudo'], "</br>";
     echo "votre adresse mail : ", $donne['mail'], "</br>";
-    
+    echo "Votre nombre de partie gagn&ée : ", $donne['nb_partie_gagnee'], "</br>";
+    echo "Votre nombre de partie perdu : ", $donne['nb_partie_perdu'], "</br>";
   }
   $req->closeCursor();
 ?>
