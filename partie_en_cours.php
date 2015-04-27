@@ -157,6 +157,18 @@ error_reporting(0);
 </form>
 
 <p>Question sur les vetements</p>
+  <form method="post" action="traitement_reponse_type_vetement.php">
+  <p>
+     <select name="type_vetement" id="type_vetement">
+     	 <option value="normal">normal</option>
+           <option value="col-monte">col-monte</option>
+           <option value="col-large">col-large</option>
+           <option value="cravate">cravate</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+
   <form method="post" action="traitement_reponse_couleur_vetement.php">
   <p>
      <select name="couleur_vetement" id="couleur_vetement">
@@ -171,6 +183,7 @@ error_reporting(0);
      <input type="submit" value="Envoyer" />
      </p>
 </form>
+
 
 <p>Question sur les lunettes</p>
   <form method="post" action="traitement_reponse_couleur_lunettes.php">
@@ -293,7 +306,7 @@ $_SESSION['couleur_collier_joueur'] = $personnage_myst_j2['couleur_collier'];
 $_SESSION['couleur_barbe_joueur'] = $personnage_myst_j2['couleur_barbe'];
 $_SESSION['couleur_vetement_joueur'] = $personnage_myst_j2['couleur_vetement'];
 $_SESSION['type_cheveux_joueur'] = $personnage_myst_j2['type_cheveux'];
-
+$_SESSION['type_vetement_joueur'] = $personnage_myst_j2['type_vetement'];
  $nom_mystere_j_id = $personnage_myst_j2['ID_nom'];
 }
 }
@@ -342,7 +355,7 @@ $_SESSION['couleur_collier'] = $personnage_myst_nj2['couleur_collier'];
 $_SESSION['couleur_barbe'] = $personnage_myst_nj2['couleur_barbe'];
 $_SESSION['couleur_vetement'] = $personnage_myst_nj2['couleur_vetement'];
 $_SESSION['type_cheveux'] = $personnage_myst_nj2['type_cheveux'];
-
+$_SESSION['type_vetement'] = $personnage_myst_nj2['type_vetement'];
 
 
 

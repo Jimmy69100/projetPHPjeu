@@ -1,6 +1,6 @@
 <?php include'head.php'; 
 $id_partie = $_SESSION['id_partie'];
-$reponse = $_POST['type_cheveux'];
+$reponse = $_POST['type_vetement'];
 ?>
 <div id='tableau'>
 <?php
@@ -12,13 +12,13 @@ $reponse = $_POST['type_cheveux'];
 
 
 <?php
-//traitement de la réponse couleur_cheveux
+//traitement de la réponse couleur_vetement
 
 
 
 
-$couleur_personnage = "SELECT * FROM personnage p, cheveux ch
-WHERE ch.ID_cheveux = p.ID_cheveux 
+$couleur_personnage = "SELECT * FROM personnage p, vetement v
+WHERE v.ID_vetement = p.ID_vetement
 AND ID_partie = :partie 
 ORDER BY id 
 ";
@@ -28,15 +28,15 @@ $couleur_personnage->execute(array(
 	));
 while ($couleur_personnage2= $couleur_personnage->fetch() ) {
 
-		if ($_SESSION['type_cheveux'] == $reponse) {
+		if ($_SESSION['type_vetement'] == $reponse) {
 
 
 
-$update_couleur_cheveux = "UPDATE personnage p, cheveux c SET est_affiche = :affiche WHERE c.ID_cheveux = p.ID_cheveux AND type_cheveux <> :ID_cheveux AND ID_partie = :partie";
-$update_couleur_cheveux = $bdd->prepare($update_couleur_cheveux);
-$update_couleur_cheveux->execute(array(
+$update_couleur_vetement = "UPDATE personnage p, vetement v SET est_affiche = :affiche WHERE v.ID_vetement = p.ID_vetement AND type_vetement <> :ID_vetement AND ID_partie = :partie";
+$update_couleur_vetement = $bdd->prepare($update_couleur_vetement);
+$update_couleur_vetement->execute(array(
 	'affiche' => 0,
-	'ID_cheveux' => $reponse,
+	'ID_vetement' => $reponse,
 	'partie' => $id_partie
 	));
 
@@ -47,11 +47,11 @@ $update_couleur_cheveux->execute(array(
 
 else {
 
-  $update_couleur_cheveux2 = "UPDATE personnage p,cheveux c SET est_affiche = :affiche WHERE c.ID_cheveux = p.ID_cheveux AND type_cheveux = :ID_cheveux AND ID_partie = :partie";
-$update_couleur_cheveux2 = $bdd->prepare($update_couleur_cheveux2);
-$update_couleur_cheveux2->execute(array(
+  $update_couleur_vetement2 = "UPDATE personnage p,vetement v SET est_affiche = :affiche WHERE v.ID_vetement = p.ID_vetement AND type_vetement = :ID_vetement AND ID_partie = :partie";
+$update_couleur_vetement2 = $bdd->prepare($update_couleur_vetement2);
+$update_couleur_vetement2->execute(array(
 	'affiche' => 0,
-	'ID_cheveux' => $reponse,
+	'ID_vetement' => $reponse,
 	'partie' => $id_partie
 	));
 
@@ -77,12 +77,14 @@ $choix = $tour_ia[array_rand($tour_ia)];
 
 
 
+
 include $choix;
 
 
-echo "Votre question : le personnage mystere a t-il des cheveux ".$reponse." ?", "</br>" ;
 
-if ($_SESSION['type_cheveux'] == $reponse) {
+echo "Votre question : le personnage mystere a t-il des vetements ".$reponse." ?", "</br>" ;
+
+if ($_SESSION['type_vetement'] == $reponse) {
 
 echo "reponse a votre question : Oui", "</br>";
 
@@ -95,22 +97,6 @@ echo "reponse a votre question : Non", "</br>";
 
 echo "L'adversaire a posé sa question : 
 Votre personnage a t-il ".$_SESSION['ia_']." ".$reponse_ia, "</br>";
-
-
-
-?>
-
-<?php
-header ("Refresh: 5;URL=partie_en_cours.php?id=$id_partie");
-include'footer.php';
-?>
-
-
-
-
-
-
-
 
 
 
