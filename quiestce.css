@@ -82,7 +82,7 @@ h1{
 	height: 773px;
 }
 #image{
-	margin-right: 31px;
+	margin-right: 38px;
 	margin-bottom: 15px;
 	width: 73px;
 	height: 121px;
@@ -195,16 +195,16 @@ margin-bottom: 0px;
 #tableau{
 	background-image:url(Fondquiestce2BLEU.png);
 	background-repeat: no-repeat;
-	padding: 77px 109px 263px 237px;
+	padding: 94px 112px 55px 214px;
 	text-align: center;
-	width: 669px;
-	height: 487px;
+	width: 690px;
+	height: 680px;
 	float: left;
 }
 #tableau #carte{
 	width: 78px;
 	margin-left: 26px;
-	margin-bottom: 1px;
+	margin-bottom: 16px;
 }
 #home{
 	position: absolute;
