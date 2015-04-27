@@ -217,7 +217,9 @@ $nom_update2->execute(array(
 	));
 
 
-
+?>
+<div id="message">
+	<?php
 echo "Cr&eacuteation de la nouvelle partie en cours, veuillez patienter...";
 ?>
 

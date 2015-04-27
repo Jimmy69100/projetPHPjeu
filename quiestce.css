@@ -19,6 +19,9 @@ body{
 	margin-top: 300px;
 	font-size: 25px;
 }
+#boutons{
+	margin-top: 105px;
+}
 #head form{
 	height: 61px;
 	margin-top: 0px;
@@ -265,7 +268,10 @@ margin-bottom: 0px;
 }
 
 
-
+#liste{
+	font-size: 35px;
+	color: white;
+}
 #encours{
 
 	background-image:url(partieencours.png);

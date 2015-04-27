@@ -12,9 +12,6 @@ $user->execute(array(
 while ($user2= $user->fetch() ) {
 	$_SESSION['id'] = $user2['id_utilisateur'];
 }
-echo "Voici la liste de vos partie en cours :";
-
-
 
 
 $partie = "SELECT * FROM partie p WHERE id_utilisateur = :utilisateur AND partie_finis = :finis";
@@ -28,25 +25,8 @@ while ($partie2= $partie->fetch() ) {
 	
 	$_SESSION['num_partie'] = $partie2['ID_partie'];
 	?>
-	<a href="partie_en_cours.php?id=<?php echo $_SESSION['num_partie']; ?>"><?php echo "partie".$_SESSION['num_partie']; ?></a>
+	<a id="liste" href="partie_en_cours.php?id=<?php echo $_SESSION['num_partie']; ?>"><?php echo "Partie N&deg".$_SESSION['num_partie']; ?></a><br>
 	<?php
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
 <?php include'footer.php'; ?>
