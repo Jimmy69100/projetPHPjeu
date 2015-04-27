@@ -241,3 +241,17 @@ margin-bottom: 0px;
 	color: white;
 
 }
+
+
+
+#encours{
+
+	background-image:url(partieencours.png);
+	background-repeat: no-repeat;
+	padding-top: 80px;
+	margin-left: 650px;
+	margin-top: 65px;	
+	text-align: center;
+	width: 590px;
+	height: 773px;
+}

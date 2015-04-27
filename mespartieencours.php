@@ -1,5 +1,5 @@
 <?php include'head.php'; ?>
-<div id="head">
+<div id="encours">
 
 
 
