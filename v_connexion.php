@@ -14,13 +14,6 @@ $_SESSION['pseudo'] = 0;
 
 
 
-
-
-
-
-
-
-
 $sql = "SELECT id_utilisateur FROM utilisateur WHERE pseudo = :pseudo AND mdp = :mdp";
 // Vérification des identifiants
 $req = $bdd->prepare($sql);
@@ -32,8 +25,8 @@ $req->execute(array(
 
 $resultat = $req->rowCount();
 
-
-
+?>
+<p id='connect'><?php
 if ($resultat == 0)
 {
     echo 'Identifiant incorrect !';
@@ -49,7 +42,7 @@ else
     echo 'Vous etes connecte !';
    
 
-}
+}?></p><?php
 
 $req->closeCursor();
 

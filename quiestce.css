@@ -7,8 +7,8 @@ body{
 	background-image:url(page2.png);
 	background-repeat: no-repeat;
 	padding: 80px 18px 0px 15px;
-	margin-left: 650px;
-	margin-top: 65px;
+	margin-left: 488px;
+	margin-top: 32px;
 	text-align: center;
 	width: 557px;
 	height: 673px;
@@ -53,8 +53,8 @@ h1{
 	background-image:url(connexion/connexion.png);
 	background-repeat: no-repeat;
 	padding-top: 80px;
-	margin-left: 650px;
-	margin-top: 65px;	
+	margin-left: 488px;
+	margin-top: 32px;	
 	text-align: center;
 	width: 590px;
 	height: 674px;
@@ -67,8 +67,8 @@ h1{
 	background-image:url(inscription/Inscription.png);
 	background-repeat: no-repeat;
 	padding-top: 80px;
-	margin-left: 650px;
-	margin-top: 65px;
+	margin-left: 488px;
+	margin-top: 32px;
 	text-align: center;
 	width: 590px;
 	height: 674px;
@@ -79,8 +79,8 @@ h1{
 	background-image:url(classement/Classement.png);
 	background-repeat: no-repeat;
 	padding-top: 80px;
-	margin-left: 650px;
-	margin-top: 65px;	
+	margin-left: 488px;
+	margin-top: 32px;	
 	text-align: center;
 	width: 590px;
 	height: 773px;
@@ -134,14 +134,14 @@ h1{
 	background-image:url(regles/regles.png);
 	background-repeat: no-repeat;
 	padding-top: 80px;
-	margin-left: 650px;
+	margin-left: 488px;
 	text-align: center;
 	width: 590px;
 	height: 773px;
 	color: white;
 	font-size: 30px;
 	padding-left: 14px;
-	margin-top: 65px;
+	margin-top: 32px;
 }
 #regle p{
 	word-wrap: break-word;
@@ -213,7 +213,7 @@ margin-bottom: 0px;
 }
 #home{
 	position: absolute;
-	margin-left: 447px;
+	margin-left: 481px;
 	margin-top: 14px;
 }
 #connex{
@@ -280,4 +280,7 @@ margin-bottom: 0px;
 	text-align: center;
 	width: 590px;
 	height: 773px;
+}
+#connect{
+	margin-top: 297px;
 }
