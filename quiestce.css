@@ -83,13 +83,16 @@ h1{
 }
 #image{
 	margin-right: 31px;
+	margin-bottom: 15px;
 	width: 73px;
 	height: 121px;
 	float: left;
 }
 #image p{
 	text-align: center;
-	margin: 0px;
+	margin: 110px 0px 0px 38px;
+	font-size: 20px;
+	color: white;
 }
 #tableaucarte{
 	float: left;
