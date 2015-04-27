@@ -53,7 +53,7 @@ $req2->execute(array(
 ?>
 <div id="message">
   <?php
-echo "Felicitation ! vous etes a present inscrit sur notre site !";
+echo "Felicitation ! Vous &ecirctes a pr&eacutesent inscrit sur notre site !";
 
 
 }
