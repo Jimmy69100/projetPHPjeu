@@ -39,7 +39,7 @@ else
 {
    
     $_SESSION['pseudo'] = $pseudo;
-    echo 'Vous etes connecte !';
+    echo 'Vous &ecirctes connect&eacute !';
    
 
 }?></p><?php

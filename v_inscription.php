@@ -1,4 +1,6 @@
 <?php include'head.php'; ?>
+<div id="head">
+
 <?php
 //stockage dans des variables des saisis du formulaire
 $pseudo = strip_tags($_POST['pseudo']);
@@ -48,7 +50,9 @@ $req2->execute(array(
     'date_inscription' => $date
     ));
 
-
+?>
+<div id="message">
+  <?php
 echo "Felicitation ! vous etes a present inscrit sur notre site !";
 
 

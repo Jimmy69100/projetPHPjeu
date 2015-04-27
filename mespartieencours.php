@@ -14,7 +14,7 @@ while ($user2= $user->fetch() ) {
 }
 
 
-$partie = "SELECT * FROM partie p WHERE id_utilisateur = :utilisateur AND partie_finis = :finis";
+$partie = "SELECT * FROM partie p WHERE id_utilisateur = :utilisateur AND partie_finis = :finis limit 0, 10";
 $partie = $bdd->prepare($partie);
 $partie->execute(array(
     'utilisateur' => $_SESSION['id'],
