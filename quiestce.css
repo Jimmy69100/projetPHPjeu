@@ -311,7 +311,10 @@ margin-bottom: 0px;
 	width: 590px;
 	height: 773px;
 }
-#question1{
+
+#bienvenue{
+	margin-top: 45px;
+}#question1{
 	float: left;
 }
 #question2{
