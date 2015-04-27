@@ -2,7 +2,7 @@
 $id_partie = $_SESSION['id_partie'];
 
 
-$tableau = array ('bleu', 'vert', 'noir', 'rouge', 'marron');
+$tableau = array ('bleu', 'vert', 'noir', 'rouge', 'marron', 'gris');
 $reponse_ia = $tableau[array_rand($tableau)];
 
 
