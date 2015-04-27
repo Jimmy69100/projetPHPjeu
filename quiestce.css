@@ -131,7 +131,7 @@ h1{
 }
 #question{
 	float: left;
-	padding: 0px 0px 17px 86px;
+	width: 623px;
 }
 #question p{
 	margin: 0px;
@@ -211,7 +211,7 @@ margin-bottom: 0px;
 #tableau{
 	background-image:url(tapartie.png);
 	background-repeat: no-repeat;
-	padding: 119px 112px 55px 33px;
+	padding: 119px 37px 55px 33px;
 	margin-left: 97px;
 	text-align: center;
 	width: 690px;
@@ -310,4 +310,10 @@ margin-bottom: 0px;
 	text-align: center;
 	width: 590px;
 	height: 773px;
+}
+#question1{
+	float: left;
+}
+#question2{
+	margin-left: 184px;
 }

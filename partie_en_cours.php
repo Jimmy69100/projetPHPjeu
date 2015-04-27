@@ -130,6 +130,7 @@ error_reporting(0);
 ?>
 
 <div id="question">
+<div id='question1'>
 <p>Question sur les cheveux</p>
   <form method="post" action="traitement_reponse_couleur_cheveux.php">
   <p>
@@ -141,8 +142,8 @@ error_reporting(0);
          
      </select>
      <input type="submit" value="Envoyer" />
-     </p>
-</form>
+     </p></form>
+
   <form method="post" action="traitement_reponse_type_cheveux.php">
   <p>
      <select name="type_cheveux" id="type_cheveux">
@@ -153,9 +154,9 @@ error_reporting(0);
          	 <option value="calvitie">calvitie</option>
      </select>
      <input type="submit" value="Envoyer" />
-     </p>
-</form>
+     </p></form></div>
 
+<div id='question1'>
 <p>Question sur les vetements</p>
   <form method="post" action="traitement_reponse_type_vetement.php">
   <p>
@@ -182,9 +183,9 @@ error_reporting(0);
      </select>
      <input type="submit" value="Envoyer" />
      </p>
-</form>
+</form></div>
 
-
+<div id='question1'>
 <p>Question sur les lunettes</p>
   <form method="post" action="traitement_reponse_couleur_lunettes.php">
   <p>
@@ -197,7 +198,9 @@ error_reporting(0);
      </select>
      <input type="submit" value="Envoyer" />
      </p>
-</form>
+</form></div>
+
+<div id='question1'>
 <p>Question sur le corps</p>
   <form method="post" action="traitement_reponse_couleur_corps.php">
   <p>
@@ -207,8 +210,9 @@ error_reporting(0);
      </select>
      <input type="submit" value="Envoyer" />
      </p>
-</form>
+</form></div>
 
+<div id='question1'>
 <p>Question sur le collier</p>
   <form method="post" action="traitement_reponse_couleur_collier.php">
   <p>
@@ -221,8 +225,9 @@ error_reporting(0);
      </select>
      <input type="submit" value="Envoyer" />
      </p>
-</form>
+</form></div>
 
+<div id='question1'>
 <p>Question sur la barbe</p>
   <form method="post" action="traitement_reponse_couleur_barbe.php">
   <p>
@@ -235,13 +240,13 @@ error_reporting(0);
      </select>
      <input type="submit" value="Envoyer" />
      </p>
-</form>
+</form></div>
 
-
+	<div id='question2'>
   <form method="post" action="partie_gagnee.php?id=<?php echo $_SESSION['id_partie']; ?>">
   <input type="text" name="nom" placeholder="nom" />
 <input type="submit" value="Tentez votre chance !" />
-</form></div>
+</form></div></div>
 
 
 
