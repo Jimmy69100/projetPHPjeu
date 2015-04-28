@@ -138,21 +138,25 @@ h1{
 #myster{
 	float: left;
 	margin-left: 126px;
+	margin-top: -60px;
 }
 #myster #carte{
 	float: left;
 	width: 73px;
+	margin: 0px;
+	height: 113px;
 }
 #question{
 	float: left;
 	width: 623px;
 }
 #question p{
-	margin: 0px;
+	margin:0px 0px 10px 0px;
 }
 #question form{
 	margin:0px 0px 10px 0px;
 	height: 21px;
+	width: 185px;
 }
 #regle{
 
@@ -350,5 +354,8 @@ margin-bottom: 0px;
 	float: left;
 }
 #question2{
-	margin-left: 184px;
+	float: left;
+	width:270px;
+	height: 43px;
+	margin:10px 0px 0px 31px;
 }

@@ -5,13 +5,8 @@ $reponse = $_POST['couleur_cheveux'];
 <div id='tableau'>
 <?php
 
-?>
 
 
-
-
-
-<?php
 //traitement de la réponse couleur_cheveux
 
 
