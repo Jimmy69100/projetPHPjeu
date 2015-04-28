@@ -2,7 +2,7 @@
 $id_partie = $_SESSION['id_partie'];
 $reponse = $_POST['type_vetement'];
 ?>
-<div id='tableau'>
+<div id='head'>
 <?php
 
 ?>

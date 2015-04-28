@@ -2,7 +2,7 @@
 $id_partie = $_SESSION['id_partie'];
 $reponse = $_POST['couleur_cheveux'];
 ?>
-<div id='tableau'>
+<div id='head'>
 <?php
 
 
