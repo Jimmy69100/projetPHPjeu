@@ -2,7 +2,7 @@
 $id_partie = $_SESSION['id_partie'];
 $reponse = $_POST['type_vetement'];
 ?>
-<div id='head'>
+<div id='head2'>
 <?php
 
 ?>
@@ -84,18 +84,19 @@ include $choix;
 
 echo "Votre question : le personnage mystere a t-il des vetements ".$reponse." ?", "</br>" ;
 
-if ($_SESSION['type_vetement'] == $reponse) {
+if ($_SESSION['type_vetement'] == $reponse) {?><p id="ecritraitement"><?php
 
-echo "reponse a votre question : Oui", "</br>";
+echo "reponse a votre question : Oui", "</br>";?></p><?php
+
 
 }
 
-else {
+else {?><p id="ecritraitement"><?php
 
 echo "reponse a votre question : Non", "</br>";
-}
+}?></p><?php
 
-echo "L'adversaire a posé sa question : 
+echo "L'adversaire a pos&eacute; sa question : 
 Votre personnage a t-il ".$_SESSION['ia_']." ".$reponse_ia, "?", "</br>";
 
 

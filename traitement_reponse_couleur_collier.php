@@ -2,7 +2,7 @@
 $id_partie = $_SESSION['id_partie'];
 $reponse = $_POST['couleur_collier'];
 ?>
-<div id='head'>
+<div id='head2'>
 <?php
 
 ?>
@@ -80,16 +80,17 @@ include $choix;
 
 echo "Votre question : le personnage mystere a t-il un collier ".$reponse." ?", "</br>" ;
 
-if ($_SESSION['couleur_collier'] == $reponse) {
+if ($_SESSION['couleur_collier'] == $reponse) {?><p id="ecritraitement"><?php
 
-echo "reponse a votre question : Oui", "</br>";
+echo "reponse a votre question : Oui", "</br>";?></p><?php
+
 
 }
 
-else {
+else {?><p id="ecritraitement"><?php
 
 echo "reponse a votre question : Non", "</br>";
-}
+}?></p><?php
 
 
 

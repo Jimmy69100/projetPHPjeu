@@ -2,7 +2,7 @@
 $id_partie = $_SESSION['id_partie'];
 $reponse = $_POST['couleur_corp'];
 ?>
-<div id='head'>
+<div id='head2'>
 <?php
 
 ?>
@@ -84,16 +84,17 @@ include $choix;
 
 echo "Votre question : le personnage mystere a t-il un corps ".$reponse." ?", "</br>" ;
 
-if ($_SESSION['couleur_corp'] == $reponse) {
+if ($_SESSION['couleur_corp'] == $reponse) {?><p id="ecritraitement"><?php
 
-echo "reponse a votre question : Oui", "</br>";
+echo "reponse a votre question : Oui", "</br>";?></p><?php
+
 
 }
 
-else {
+else {?><p id="ecritraitement"><?php
 
 echo "reponse a votre question : Non", "</br>";
-}
+}?></p><?php
 
 
 echo "L'adversaire a pos&eacute; sa question : 

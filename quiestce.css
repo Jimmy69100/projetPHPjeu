@@ -14,6 +14,18 @@ body{
 	height: 673px;
 	color: white;
 }
+#head2{
+	background-image:url(page2.png);
+	background-repeat: no-repeat;
+	padding: 300px 18px 0px 15px;
+	margin-left: 488px;
+	margin-top: 32px;
+	text-align: center;
+	width: 557px;
+	height: 673px;
+	color: white;
+	font-size: 20px;
+}
 
 #message{
 	margin-top: 300px;
@@ -384,4 +396,7 @@ margin-bottom: 0px;
 		font-family: helvetica;
 	color: white;
 	font-size: 20px,
+}
+#ecritraitement{
+	font-size: 30px;
 }
