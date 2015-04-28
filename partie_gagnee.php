@@ -31,7 +31,7 @@ while ($user2= $user->fetch() ) {
 }
 $_SESSION['nb_partie_gagnee'] = $_SESSION['nb_partie_gagnee'] + 1;
 
-$nb_partie_gagnee = "UPDATE utilisateur SET nb_partie_gagnee = :nb_partis WHERE utilisateur = :utilisateur";
+$nb_partie_gagnee = "UPDATE utilisateur SET nb_partie_gagnee = :nb_partis WHERE pseudo = :utilisateur";
  $nb_partie_gagnee = $bdd->prepare($nb_partie_gagnee);
 $nb_partie_gagnee->execute(array(
 	'nb_partis' => $_SESSION['nb_partie_gagnee'],
