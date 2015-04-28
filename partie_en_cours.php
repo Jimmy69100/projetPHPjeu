@@ -1,4 +1,4 @@
-<?php include'head.php'; 
+<?php include'head2.php'; 
 $_SESSION['id_partie'] = $_GET['id'];
 $id_partie = $_SESSION['id_partie'];
 ?>
