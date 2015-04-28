@@ -1,7 +1,7 @@
 <?php include'head.php'; 
 $_SESSION['id_partie'] = $_GET['id'];
 ?>
-<div id='tableau'>
+<div id='head'>
 
 
 
