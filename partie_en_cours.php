@@ -121,146 +121,7 @@ if ($personnage_advers2['est_affiche_nj'] == 0) {
 <img id="carte" src="dos2.png" /></div>
 	<?php
 	}
-} ?></div> <?php
-
-
-//Debut question :
-error_reporting(0);
-
-?>
-
-<div id="question">
-<div id='question1'>
-
-<p>Question sur le sexe</p>
-  <form method="post" action="traitement_reponse_sexe.php">
-  <p>
-     <select name="sexe" id="sexe">
-     	 <option value="homme">homme</option>
-           <option value="femme">femme</option>
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p></form>
-
-
-<p>Question sur les cheveux</p>
-  <form method="post" action="traitement_reponse_couleur_cheveux.php">
-  <p>
-     <select name="couleur_cheveux" id="couleur_cheveux">
-     	 <option value="noir">noir</option>
-           <option value="blond">blond</option>
-           <option value="roux">roux</option>
-           <option value="gris">gris</option>
-         
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p></form>
-
-  <form method="post" action="traitement_reponse_type_cheveux.php">
-  <p>
-     <select name="type_cheveux" id="type_cheveux">
-     	 <option value="court">court</option>
-           <option value="mi-long">mi_long</option>
-           <option value="long">long</option>
-           
-         	 <option value="calvitie">calvitie</option>
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p></form></div>
-
-<div id='question1'>
-<p>Question sur les vetements</p>
-  <form method="post" action="traitement_reponse_type_vetement.php">
-  <p>
-     <select name="type_vetement" id="type_vetement">
-     	 <option value="normal">normal</option>
-           <option value="col-monte">col-monte</option>
-           <option value="col-large">col-large</option>
-           <option value="cravate">cravate</option>
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form>
-
-  <form method="post" action="traitement_reponse_couleur_vetement.php">
-  <p>
-     <select name="couleur_vetement" id="couleur_vetement">
-     	 <option value="bleu">bleu</option>
-           <option value="vert">vert</option>
-           <option value="rouge">rouge</option>
-           <option value="marron">marron</option>
-           <option value="violet">violet</option>
-           <option value="noir">noir</option>
-           <option value="gris">gris</option>
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form></div>
-
-<div id='question1'>
-<p>Question sur les lunettes</p>
-  <form method="post" action="traitement_reponse_couleur_lunettes.php">
-  <p>
-     <select name="couleur_lunettes" id="couleur_lunettes">
-     	 <option value="bleu">bleu</option>
-           <option value="vert">vert</option>
-           <option value="orange">orange</option>
-           <option value="violet">violet</option>
-           <option value="noir">noir</option>
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form></div>
-
-<div id='question1'>
-<p>Question sur le corps</p>
-  <form method="post" action="traitement_reponse_couleur_corps.php">
-  <p>
-     <select name="couleur_corp" id="couleur_corps">
-     	 <option value="noir">noir</option>
-           <option value="blanc">blanc</option>
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form></div>
-
-<div id='question1'>
-<p>Question sur le collier</p>
-  <form method="post" action="traitement_reponse_couleur_collier.php">
-  <p>
-     <select name="couleur_collier" id="couleur_collier">
-     	   <option value="bleu">bleu</option>
-           <option value="jaune">jaune</option>
-           <option value="rouge">rouge</option>
-           <option value="gris">gris</option>
-        
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form></div>
-
-<div id='question1'>
-<p>Question sur la barbe</p>
-  <form method="post" action="traitement_reponse_couleur_barbe.php">
-  <p>
-     <select name="couleur_barbe" id="couleur_barbe">
-     	   <option value="gris">gris</option>
-           <option value="roux">roux</option>
-           <option value="blond">blond</option>
-           <option value="noir">noir</option>
-        
-     </select>
-     <input type="submit" value="Envoyer" />
-     </p>
-</form></div>
-
-	<div id='question2'>
-  <form method="post" action="partie_gagnee.php?id=<?php echo $_SESSION['id_partie']; ?>">
-  <input type="text" name="nom" placeholder="nom" />
-<input type="submit" value="Tentez votre chance !" />
-</form></div></div>
-
-
+} ?></div> 
 
 
 
@@ -360,7 +221,7 @@ while ($personnage_myst_nj2= $personnage_myst_nj->fetch() ) {
 				
 	?>
 <div id="carte">
-<img id="carte" src="dos.png" />
+<img id="carte" src="dos.png" /><p id="joueur2">personnage a deviner</p>
 
  <?php
  //caracteristiques du personnage A DEVINER (mystere nj)
@@ -381,7 +242,7 @@ $_SESSION['sexe'] = $personnage_myst_nj2['genre_cheveux'];
 
 }
 }
-?> </div><?php
+?> </div><p id="joueur">votre personnage</p><?php
 
 
 $nom_perso_mystere = "SELECT * FROM personnage p, nom n WHERE n.ID_nom = p.ID_nom AND p.ID_nom = :id";
@@ -401,7 +262,144 @@ $id_partie = $_SESSION['id_partie'];
 
 
 
-									?></div>
+									?></div><?php
+
+//Debut question :
+error_reporting(0);
+
+?>
+  <div id='question2'>
+  <form method="post" action="partie_gagnee.php?id=<?php echo $_SESSION['id_partie']; ?>">
+  <input id="nomperso" type="text" name="nom" placeholder="Qui est-ce ?" ;/>
+<input type="submit" value="Tentez votre chance !" />
+</form></div>
+
+<div id="question">
+<div id='question1'>
+
+<p>Question sur le sexe</p>
+  <form method="post" action="traitement_reponse_sexe.php">
+  <p>
+     <select name="sexe" id="sexe">
+       <option value="homme">homme</option>
+           <option value="femme">femme</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p></form></div>
+
+<div id='question1'>
+<p>Question sur les cheveux</p>
+  <form method="post" action="traitement_reponse_couleur_cheveux.php">
+  <p>
+     <select name="couleur_cheveux" id="couleur_cheveux">
+       <option value="noir">noir</option>
+           <option value="blond">blond</option>
+           <option value="roux">roux</option>
+           <option value="gris">gris</option>
+         
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p></form>
+
+  <form method="post" action="traitement_reponse_type_cheveux.php">
+  <p>
+     <select name="type_cheveux" id="type_cheveux">
+       <option value="court">court</option>
+           <option value="mi-long">mi_long</option>
+           <option value="long">long</option>
+           
+           <option value="calvitie">calvitie</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p></form></div>
+
+<div id='question1'>
+<p>Question sur les vetements</p>
+  <form method="post" action="traitement_reponse_type_vetement.php">
+  <p>
+     <select name="type_vetement" id="type_vetement">
+       <option value="normal">normal</option>
+           <option value="col-monte">col-monte</option>
+           <option value="col-large">col-large</option>
+           <option value="cravate">cravate</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form>
+
+  <form method="post" action="traitement_reponse_couleur_vetement.php">
+  <p>
+     <select name="couleur_vetement" id="couleur_vetement">
+       <option value="bleu">bleu</option>
+           <option value="vert">vert</option>
+           <option value="rouge">rouge</option>
+           <option value="marron">marron</option>
+           <option value="violet">violet</option>
+           <option value="noir">noir</option>
+           <option value="gris">gris</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form></div>
+
+<div id='question1'>
+<p>Question sur les lunettes</p>
+  <form method="post" action="traitement_reponse_couleur_lunettes.php">
+  <p>
+     <select name="couleur_lunettes" id="couleur_lunettes">
+       <option value="bleu">bleu</option>
+           <option value="vert">vert</option>
+           <option value="orange">orange</option>
+           <option value="violet">violet</option>
+           <option value="noir">noir</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form></div>
+
+<div id='question1'>
+<p>Question sur le corps</p>
+  <form method="post" action="traitement_reponse_couleur_corps.php">
+  <p>
+     <select name="couleur_corp" id="couleur_corps">
+       <option value="noir">noir</option>
+           <option value="blanc">blanc</option>
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form></div>
+
+<div id='question1'>
+<p>Question sur le collier</p>
+  <form method="post" action="traitement_reponse_couleur_collier.php">
+  <p>
+     <select name="couleur_collier" id="couleur_collier">
+         <option value="bleu">bleu</option>
+           <option value="jaune">jaune</option>
+           <option value="rouge">rouge</option>
+           <option value="gris">gris</option>
+        
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form></div>
+
+<div id='question1'>
+<p>Question sur la barbe</p>
+  <form method="post" action="traitement_reponse_couleur_barbe.php">
+  <p>
+     <select name="couleur_barbe" id="couleur_barbe">
+         <option value="gris">gris</option>
+           <option value="roux">roux</option>
+           <option value="blond">blond</option>
+           <option value="noir">noir</option>
+        
+     </select>
+     <input type="submit" value="Envoyer" />
+     </p>
+</form></div>
+</div>
+
 
 <?php
 include'footer.php';
