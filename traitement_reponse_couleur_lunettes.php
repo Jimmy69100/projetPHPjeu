@@ -99,7 +99,7 @@ echo "reponse a votre question : Non", "</br>";
 }
 
 echo "L'adversaire a pos&eacute; sa question : 
-Votre personnage a t-il ".$_SESSION['ia_']." ".$reponse_ia, "?", "</br>";
+Votre personnage a t-il ".$_SESSION['ia_']." ".$reponse_ia, "?", "</br>"
 
 
 
