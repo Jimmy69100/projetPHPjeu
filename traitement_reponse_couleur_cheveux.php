@@ -91,29 +91,6 @@ echo "reponse a votre question : Non", "</br>";
 echo "L'adversaire a posé sa question : 
 Votre personnage a t-il ".$_SESSION['ia_']." ".$reponse_ia, "?", "</br>";
 
-
-
-?>
-
-<?php
 header ("Refresh: 5;URL=partie_en_cours.php?id=$id_partie");
 include'footer.php';
 ?>
-
-
-
-
-
-
-
-
-
-
-?>
-
-<?php
-header ("Refresh: 5;URL=partie_en_cours.php?id=$id_partie");
-include'footer.php';
-?>
-
-
