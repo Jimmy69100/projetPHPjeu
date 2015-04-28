@@ -19,6 +19,7 @@ body{
 	margin-top: 300px;
 	font-size: 25px;
 	font-family: helvetica;
+	color: white;
 }
 #boutons{
 	margin-top: 105px;
@@ -94,7 +95,7 @@ h1{
 
 	background-image:url(classement/Classement.png);
 	background-repeat: no-repeat;
-	padding-top: 80px;
+	padding-top: 120px;
 	margin-left: 488px;
 	margin-top: 32px;	
 	text-align: center;
@@ -377,4 +378,10 @@ margin-bottom: 0px;
 	margin: 0px;
 	height: 51px;
 	width: 329px;
+}
+
+#classement2{
+		font-family: helvetica;
+	color: white;
+	font-size: 20px,
 }
