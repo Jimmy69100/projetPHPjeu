@@ -10,7 +10,7 @@ session_start();
  	<link rel="icon" type="image/jpg" href="favicon.jpg" />
  	<title>
   	Qui est-ce ?
- 	</title>
+ 	</title>fgcsdx
 	</head>
 	<header>
 	</header>
